@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dkewdrsdafkci"]
+
+[node name="maze" type="Node3D"]
