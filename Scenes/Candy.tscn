@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwn4x5ftgfp7g"]
+
+[ext_resource type="Script" path="res://Scripts/Candy.gd" id="1_2ayjj"]
+
+[node name="Candy" type="Area3D"]
+script = ExtResource("1_2ayjj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
