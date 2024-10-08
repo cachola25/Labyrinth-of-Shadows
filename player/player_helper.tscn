@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwwwtgajo3ecu"]
+
+[ext_resource type="PackedScene" uid="uid://dflbeud5mli1g" path="res://assets/Knight.fbx" id="1_muoks"]
+
+[node name="player_helper" type="Node3D"]
+
+[node name="Knight" parent="." instance=ExtResource("1_muoks")]
