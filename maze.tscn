@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=2 format=3 uid="uid://dkewdrsdafkci"]
+
+[ext_resource type="Script" path="res://Scripts/Maze.gd" id="1_j28gf"]
 
 [node name="maze" type="Node3D"]
+script = ExtResource("1_j28gf")
+
+[node name="GameTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_GameTimerTimeout"]
