@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://wmeygnyufg2y"]
+
+[ext_resource type="PackedScene" uid="uid://bgy2ih0cnr8e1" path="res://scenes/Monster.tscn" id="1_s0wbr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wvdo5"]
+size = Vector3(10.2338, 1, 7.21698)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vxaqk"]
+
+[node name="Basic Scene" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.43697, 0)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_s0wbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.263404, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601913, -0.187203)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.618713, -2.61111, -1.16037)
+shape = SubResource("BoxShape3D_wvdo5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(99.9869, -1.61785, 0, 1.61785, 99.9869, 0, 0, 0, 100, -1.92159, -2.06445, 0)
+mesh = SubResource("PlaneMesh_vxaqk")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91688)
