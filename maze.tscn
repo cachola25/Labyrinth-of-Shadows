@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=14 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="PackedScene" path="res://assets/Corn.tscn" id="1_fwotj"]
-[ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
+[ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" uid="uid://buqt4kekqx2fd" path="res://assets/Dirt.tscn" id="1_o8okg"]
 [ext_resource type="PackedScene" uid="uid://cwn4x5ftgfp7g" path="res://Scenes/Candy.tscn" id="2_bxqei"]
-[ext_resource type="Texture2D" uid="uid://bvs1umk6trk2t" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="Texture2D" uid="uid://cpshlgthueqvw" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
@@ -26,6 +26,9 @@ albedo_texture = ExtResource("3_ufobr")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cim0h"]
 albedo_texture = ExtResource("3_ufobr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bs4pa"]
+size = Vector3(10, 10, 1)
 
 [node name="maze" type="Node3D"]
 
@@ -982,13 +985,13 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.8862, 0, -29.1383)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.87126, 0, -41.0217)
 
 [node name="Sketchfab_Scene318" parent="DirtFloor" instance=ExtResource("1_o8okg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.91329, 0, -52.8339)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.72589, 0, -52.8339)
 
 [node name="Sketchfab_Scene319" parent="DirtFloor" instance=ExtResource("1_o8okg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.13029, 0, -64.7873)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.80008, 0, -64.7873)
 
 [node name="Sketchfab_Scene320" parent="DirtFloor" instance=ExtResource("1_o8okg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.21318, 0, -76.3081)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.82688, 0, -76.3081)
 
 [node name="Sketchfab_Scene268" parent="DirtFloor" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.9404, 0, -17.2938)
@@ -1010,20 +1013,20 @@ mesh = SubResource("PlaneMesh_wlx23")
 surface_material_override/0 = SubResource("StandardMaterial3D_xjtef")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall1"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 79.9049, 49, -35)
 shape = SubResource("BoxShape3D_ds4ho")
 
 [node name="Wall2" type="StaticBody3D" parent="Scenery"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 68.295, -2.0817, -68.9302)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Scenery/Wall2"]
-transform = Transform3D(-1.31126e-07, -1, 8.61945e-08, 0.0140494, -8.80283e-08, -0.999901, 0.999901, -1.29902e-07, 0.0140494, 80.0751, 49, -35)
+transform = Transform3D(-1.31126e-07, -1, 8.61945e-08, 0.0140494, -8.80283e-08, -0.999901, 0.999901, -1.29902e-07, 0.0140494, 79.1952, 49, -35)
 layers = 3
 material_override = SubResource("StandardMaterial3D_58846")
 mesh = SubResource("PlaneMesh_wlx23")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall2"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 79.675, 49, -35)
 shape = SubResource("BoxShape3D_ds4ho")
 
 [node name="Wall3" type="StaticBody3D" parent="Scenery"]
@@ -1036,20 +1039,20 @@ material_override = SubResource("StandardMaterial3D_h5ws7")
 mesh = SubResource("PlaneMesh_wlx23")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall3"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 78.4911, 49, -35)
 shape = SubResource("BoxShape3D_ds4ho")
 
 [node name="Wall4" type="StaticBody3D" parent="Scenery"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -3.48168, -67.615)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Scenery/Wall4"]
-transform = Transform3D(-2.91323e-11, -1, -4.5307e-08, -0.0365042, 4.52779e-08, -0.999334, 0.999334, 1.62478e-09, -0.0365042, 80, 49, -35)
+transform = Transform3D(-2.91323e-11, -1, -4.5307e-08, -0.0365042, 4.52779e-08, -0.999334, 0.999334, 1.62478e-09, -0.0365042, 77.9962, 49, -35)
 layers = 3
 material_override = SubResource("StandardMaterial3D_cim0h")
 mesh = SubResource("PlaneMesh_wlx23")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall4"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 79.868, 49, -35)
 shape = SubResource("BoxShape3D_ds4ho")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
@@ -1058,7 +1061,7 @@ light_color = Color(0.801336, 0.999124, 1, 1)
 omni_range = 40.0
 
 [node name="player" parent="." instance=ExtResource("4_0xims")]
-transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, -3.23598, -0.404661, -3.46089)
+transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, 1.89058, -0.404661, -3.46089)
 platform_wall_layers = 65535
 
 [node name="Candy" parent="." instance=ExtResource("2_bxqei")]
@@ -1069,3 +1072,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2151, 8.03089, -4.863)
 light_energy = 16.0
 light_size = 1.994
 omni_range = 22.1751
+
+[node name="StartingWall" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StartingWall"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.204195, 0, -4.43454)
+shape = SubResource("BoxShape3D_bs4pa")
