@@ -3,12 +3,22 @@ extends CharacterBody3D
 class_name Player
 
 const SPEED = 15
-
+@onready var current_camera = $THIRD
 func _ready():
 	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
+	current_camera.current = true
 	
 
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("change_perspective"):
+		if current_camera == $THIRD:
+			current_camera = $FIRST
+		else:
+			current_camera = $THIRD
+	elif Input.is_action_pressed("toggle_looking_back"):
+		$LOOK_BACK.current = true
+	else:
+		current_camera.current = true
 	default_movement(delta)
 	
 func default_movement(delta):
@@ -43,8 +53,8 @@ func default_movement(delta):
 
 func update_camera():
 	var camera = $THIRD
-	var camera_distance = -5.0  # Positive value to place camera behind the player
-	var camera_height = 4.0
+	var camera_distance = -2.0
+	var camera_height = 2.0
 
 	var player_transform = global_transform
 	var player_position = player_transform.origin
@@ -55,3 +65,4 @@ func update_camera():
 
 	camera.global_transform.origin = camera_position
 	camera.look_at(player_position, Vector3.UP)
+	camera.rotate_object_local(Vector3.RIGHT, deg_to_rad(20))

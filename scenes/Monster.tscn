@@ -1,19 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgy2ih0cnr8e1"]
+[gd_scene load_steps=2 format=3 uid="uid://c3xp3uts7gtys"]
 
-[ext_resource type="Script" path="res://scenes/monster.gd" id="1_eeoea"]
-[ext_resource type="PackedScene" uid="uid://c77j3tcy40jwk" path="res://scenes/MonsterAnimation.tscn" id="2_ork4b"]
+[ext_resource type="PackedScene" uid="uid://t02xlo3tvim8" path="res://monster.fbx" id="1_cmup7"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4vo60"]
-radius = 0.716221
-height = 4.43095
+[node name="Monster" type="Node3D"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
-collision_mask = 2
-script = ExtResource("1_eeoea")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.247023, 0)
-shape = SubResource("CapsuleShape3D_4vo60")
-
-[node name="Blender_2_81" parent="." instance=ExtResource("2_ork4b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.453552, -1.7958, 0.904022)
+[node name="monster" parent="." instance=ExtResource("1_cmup7")]
