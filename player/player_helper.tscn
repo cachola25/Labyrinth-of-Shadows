@@ -1,7 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwwwtgajo3ecu"]
 
-[ext_resource type="PackedScene" uid="uid://dflbeud5mli1g" path="res://assets/Knight.fbx" id="1_muoks"]
+[ext_resource type="PackedScene" uid="uid://cdq4tapbirtom" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
 
 [node name="player_helper" type="Node3D"]
 
-[node name="Knight" parent="." instance=ExtResource("1_muoks")]
+[node name="survivor" parent="." instance=ExtResource("2_u2un6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0452657, 0, 0.0807633)
