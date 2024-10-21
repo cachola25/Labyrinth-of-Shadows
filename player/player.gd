@@ -10,6 +10,7 @@ func _ready():
 	
 
 func _process(delta: float) -> void:
+	print($player_helper/survivor/flashlight.global_transform)
 	if Input.is_action_just_pressed("change_perspective"):
 		if current_camera == $THIRD:
 			current_camera = $FIRST
@@ -25,6 +26,7 @@ func default_movement(delta):
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var camera_basis = $THIRD.global_transform.basis
 	var direction = (camera_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var is_moving_backwards = input_dir.y > 0
 
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * SPEED
@@ -35,12 +37,11 @@ func default_movement(delta):
 		var rotation_speed = 3.0
 		var new_angle = lerp_angle(current_angle, desired_angle, delta * rotation_speed)
 		
-		if not input_dir.y > 0:
+		if not is_moving_backwards:
 			rotation.y = new_angle
 			$player_helper/survivor.rotation.y = 0
 		else:
 			$player_helper/survivor.rotation.y = PI
-
 		$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Jog")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -48,7 +49,7 @@ func default_movement(delta):
 		$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
 
 	move_and_slide()
-	if not input_dir.y > 0:
+	if not is_moving_backwards:
 		update_camera()
 
 func update_camera():
