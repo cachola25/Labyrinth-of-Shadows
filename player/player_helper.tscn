@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwwwtgajo3ecu"]
+[gd_scene load_steps=3 format=3 uid="uid://bwwwtgajo3ecu"]
 
+[ext_resource type="PackedScene" uid="uid://bm3ibtngmjmdh" path="res://assets/ri4lwkjmjj7k-Flashlight.obj/flashlight.fbx" id="2_dysc4"]
 [ext_resource type="PackedScene" uid="uid://spd7sur75d8x" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
 
 [node name="player_helper" type="Node3D"]
 
 [node name="survivor" parent="." instance=ExtResource("2_u2un6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0452657, 0, 0.0807633)
+
+[node name="flashlight" parent="survivor" instance=ExtResource("2_dysc4")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.3, 1.1, 0.7)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="survivor"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.321, 1.177, 0.91)
+light_energy = 80.0
+spot_range = 15.0
+spot_angle = 39.5246
