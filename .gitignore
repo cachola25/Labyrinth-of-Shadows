@@ -3,3 +3,9 @@
 /android/
 .DS_Store
 *.import
+assets/Final\ Exam\ -\ PSX\ Survival\ Horror\ Asset\ Pack/Blender\ 4.0/*
+assets/Final\ Exam\ -\ PSX\ Survival\ Horror\ Asset\ Pack/Blender\ 4.0/Textures/*
+!assets/Final\ Exam\ -\ PSX\ Survival\ Horror\ Asset\ Pack/Blender\ 4.0/Textures/
+!assets/Final\ Exam\ -\ PSX\ Survival\ Horror\ Asset\ Pack/Blender\ 4.0/Textures/TEX-SurvivorA.png
+FBX/
+Asset\ Index\.txt

@@ -6,7 +6,7 @@ const SPEED = 15
 const JUMP_VELOCITY = 10
 
 func _ready():
-	pass
+	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
 	
 
 func _process(delta: float) -> void:
@@ -20,6 +20,6 @@ func default_movement(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		$player_helper/Knight/AnimationPlayer.play("Running_A")
+		$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Jog")
 	
 	move_and_slide()

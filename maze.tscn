@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="PackedScene" uid="uid://dd3ao1k67tl4c" path="res://assets/Corn.tscn" id="1_fwotj"]
-[ext_resource type="PackedScene" uid="uid://buqt4kekqx2fd" path="res://assets/Dirt.tscn" id="1_o8okg"]
+[ext_resource type="PackedScene" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
 
 [node name="maze" type="Node3D"]
 

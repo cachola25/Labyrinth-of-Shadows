@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="labyrinth_of_shadows"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_forward={
