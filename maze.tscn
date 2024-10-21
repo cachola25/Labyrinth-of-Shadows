@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=13 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
-[ext_resource type="Texture2D" uid="uid://cftq748skkv82" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="PackedScene" uid="uid://cwn4x5ftgfp7g" path="res://Scenes/Candy.tscn" id="2_bxqei"]
+[ext_resource type="Texture2D" uid="uid://bvs1umk6trk2t" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
@@ -1057,5 +1058,14 @@ light_color = Color(0.801336, 0.999124, 1, 1)
 omni_range = 40.0
 
 [node name="player" parent="." instance=ExtResource("4_0xims")]
-transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, -3.236, 0, -3.461)
+transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, -3.23598, -0.404661, -3.46089)
 platform_wall_layers = 65535
+
+[node name="Candy" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 10.9911, 1.15872, -6.36763)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.2151, 8.03089, -4.863)
+light_energy = 16.0
+light_size = 1.994
+omni_range = 22.1751
