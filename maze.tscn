@@ -1,11 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=3 format=3 uid="uid://dkewdrsdafkci"]
 
 [ext_resource type="Script" path="res://Scripts/Maze.gd" id="1_j28gf"]
+[ext_resource type="PackedScene" uid="uid://cwn4x5ftgfp7g" path="res://Scenes/Candy.tscn" id="2_bxqei"]
 
 [node name="maze" type="Node3D"]
 script = ExtResource("1_j28gf")
 
 [node name="GameTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="Candy" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 13.3211, 0)
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_GameTimerTimeout"]
