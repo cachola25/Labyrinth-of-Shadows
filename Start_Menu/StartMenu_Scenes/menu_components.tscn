@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=3 uid="uid://cy3x0c8yjiuo"]
+
+[ext_resource type="MeshLibrary" uid="uid://4w6d41o411lw" path="res://assets/tiles/tiles_new.meshlib" id="1_s30sv"]
+[ext_resource type="PackedScene" uid="uid://c80olc41m7av4" path="res://Start_Menu/StartMenu_Scenes/flashing_lights.tscn" id="2_xtjsy"]
+[ext_resource type="PackedScene" uid="uid://8pkynsamda3q" path="res://assets/scarecrow/scarecrow/scene.gltf" id="3_1cyjq"]
+[ext_resource type="PackedScene" uid="uid://yb0fhqr65j8n" path="res://assets/Corn Model/scene.gltf" id="3_fqjp5"]
+[ext_resource type="PackedScene" uid="uid://d11ju4lvyb3pg" path="res://assets/Clown/the_clown/scene.gltf" id="4_d8cwi"]
+
+[sub_resource type="Environment" id="Environment_ee1c3"]
+background_mode = 1
+ambient_light_color = Color(0.1, 0.1, 0.1, 1)
+
+[node name="3D_Menu_Scene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.532309, -0.279363, -0.799127, -0.0412917, 0.951425, -0.305099, 0.845543, -0.12941, -0.517987, 13.3217, 3.67529, -4.2558)
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_s30sv")
+data = {
+"cells": PackedInt32Array(0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, 65528, 0, 1, 65528, 0, 2, 65528, 0, 3, 65528, 0, 4, 65528, 0, 5, 65528, 0, 6, 65528, 0, 7, 65528, 0, 8, 65528, 0, 9, 65528, 0, 10, 65528, 0, 11, 65528, 0, 12, 65528, 0, 12, 65529, 0, 12, 65530, 0, 12, 65531, 0, 12, 65532, 0, 12, 65533, 0, 12, 65534, 0, 12, 65535, 0, 11, 65535, 0, 10, 65535, 0, 9, 65535, 0, 8, 65535, 0, 7, 65535, 0, 6, 65535, 0, 5, 65535, 0, 4, 65535, 0, 3, 65535, 0, 2, 65535, 0, 1, 65535, 0, 1, 65529, 1, 2, 65529, 1, 3, 65529, 1, 5, 65529, 1, 6, 65529, 1, 7, 65529, 1, 8, 65529, 0, 9, 65529, 0, 10, 65529, 1, 11, 65529, 1, 11, 65530, 1, 11, 65531, 1, 11, 65532, 1, 11, 65533, 0, 11, 65534, 1, 10, 65534, 1, 9, 65534, 1, 8, 65534, 0, 7, 65534, 1, 6, 65534, 1, 5, 65534, 1, 4, 65534, 0, 3, 65534, 1, 2, 65534, 1, 1, 65534, 1, 1, 65533, 1, 1, 65532, 0, 1, 65531, 1, 1, 65530, 1, 2, 65530, 1, 3, 65530, 1, 5, 65530, 1, 6, 65530, 1, 7, 65530, 1, 8, 65530, 1, 10, 65531, 1, 10, 65532, 1, 10, 65533, 0, 9, 65533, 1, 8, 65533, 0, 7, 65533, 1, 6, 65533, 1, 5, 65533, 0, 4, 65533, 0, 3, 65533, 1, 2, 65533, 0, 2, 65532, 0, 2, 65531, 1, 3, 65531, 1, 5, 65531, 0, 6, 65531, 0, 7, 65531, 1, 8, 65531, 1, 9, 65531, 1, 9, 65532, 1, 8, 65532, 1, 7, 65532, 1, 6, 65532, 1, 5, 65532, 1, 4, 65532, 1, 3, 65532, 1, 4, 65529, 0, 4, 65530, 0, 4, 65531, 0, 9, 65530, 0, 10, 65530, 1)
+}
+
+[node name="Flashing_Lights" parent="." instance=ExtResource("2_xtjsy")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14.0048, 5.752, -2.69338)
+
+[node name="Flashing_Lights2" parent="." instance=ExtResource("2_xtjsy")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.5501, 6.56366, -4.18263)
+
+[node name="Flashing_Lights3" parent="." instance=ExtResource("2_xtjsy")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.0665, 7.74376, -1.30758)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ee1c3")
+
+[node name="Flashing_Lights3" parent="WorldEnvironment" instance=ExtResource("2_xtjsy")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 17.2597, 7.73845, -2.9117)
+
+[node name="Sketchfab_Scene" parent="WorldEnvironment" instance=ExtResource("3_1cyjq")]
+transform = Transform3D(0.0836477, 0, 0.0548001, 0, 0.1, 0, -0.0548001, 0, 0.0836477, 15.5461, -13.1852, -0.87207)
+
+[node name="Sketchfab_Scene2" parent="WorldEnvironment" instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2161, 0.592041, -2.29205)
+
+[node name="Sketchfab_Scene3" parent="WorldEnvironment" instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4945, 0.765381, -2.98615)
+
+[node name="Sketchfab_Scene4" parent="WorldEnvironment" instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0238, 1.0918, -2.45374)
+
+[node name="Sketchfab_Scene5" parent="WorldEnvironment" instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5277, 1.36206, -2.33972)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.566, 2.1, -5.95)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.788, 2.1, -4.83)
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.751, 2.1, -5.26)
+
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.796, 2.1, -4.272)
+
+[node name="Sketchfab_Scene6" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.749, 2.1, -3.857)
+
+[node name="Sketchfab_Scene7" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.749, 2.1, -3.452)
+
+[node name="Sketchfab_Scene8" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.749, 2.1, -3.064)
+
+[node name="Sketchfab_Scene9" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.865, 2.1, -2.265)
+
+[node name="Sketchfab_Scene10" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.831, 2.1, -2.627)
+
+[node name="Sketchfab_Scene11" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.329, 2.10034, -2.39423)
+
+[node name="Sketchfab_Scene12" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.919, 2.1, -2.407)
+
+[node name="Sketchfab_Scene13" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.558, 2.1, -2.275)
+
+[node name="Sketchfab_Scene14" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.178, 2.1, -2.222)
+
+[node name="Sketchfab_Scene15" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.882, 2.1, -2.177)
+
+[node name="Sketchfab_Scene16" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.639, 2.1, -2.138)
+
+[node name="Sketchfab_Scene17" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.308, 2.1, -2.174)
+
+[node name="Sketchfab_Scene20" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3196, 1.21277, -2.89526)
+
+[node name="Sketchfab_Scene21" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.047, 0.91, -2.492)
+
+[node name="Sketchfab_Scene22" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5898, 0.9, -2.395)
+
+[node name="Sketchfab_Scene23" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.924, 0.914917, -2.85291)
+
+[node name="Sketchfab_Scene24" parent="." instance=ExtResource("4_d8cwi")]
+transform = Transform3D(-0.860297, 0, 0.509792, 0, 1, 0, -0.509792, 0, -0.860297, 15.7459, 0.0499578, -2.59308)
+
+[node name="Flashing_Lights4" parent="." instance=ExtResource("2_xtjsy")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 13.1533, 8.73739, -0.925549)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9497, 1.25488, -3.55585)
+
+[node name="Sketchfab_Scene18" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 1.81421, -4.43256)
+
+[node name="Sketchfab_Scene19" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6641, 1.39954, -3.84204)
+
+[node name="Sketchfab_Scene25" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4023, 1.40539, -2.31925)
+
+[node name="Sketchfab_Scene26" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2939, 1.46142, -2.18779)
+
+[node name="Sketchfab_Scene27" parent="." instance=ExtResource("3_fqjp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5908, 2.08466, -2.3739)

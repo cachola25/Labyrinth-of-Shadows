@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://14m4pwxvrlfe"]
+
+[ext_resource type="FontFile" uid="uid://bbn1qdl4m3ji0" path="res://assets/Fonts/Avallon Alt.ttf" id="1_omedg"]
+
+[sub_resource type="Environment" id="Environment_megbh"]
+background_mode = 1
+
+[node name="End_Screen" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_omedg")
+theme_override_font_sizes/font_size = 128
+text = "You made it..."
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.45
+
+[node name="Start" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_colors/icon_hover_color = Color(0.101868, 0.101868, 0.101868, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.0708272, 0.0708272, 0.0708272, 1)
+theme_override_fonts/font = ExtResource("1_omedg")
+theme_override_font_sizes/font_size = 40
+text = "Play Again"
+expand_icon = true
+
+[node name="Quit" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/icon_hover_color = Color(0.101961, 0.101961, 0.101961, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.101961, 0.101961, 0.101961, 1)
+theme_override_fonts/font = ExtResource("1_omedg")
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+icon_alignment = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_megbh")
