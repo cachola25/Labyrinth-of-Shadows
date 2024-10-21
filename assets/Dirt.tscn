@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://buqt4kekqx2fd"]
+
+[ext_resource type="PackedScene" uid="uid://be4bbx67sttss" path="res://dirt_ground_texture.glb" id="1_ya32a"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_ya32a")]
+
+[node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_2" index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

@@ -1,15 +1,1061 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=12 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="Script" path="res://Scripts/Maze.gd" id="1_j28gf"]
-[ext_resource type="PackedScene" uid="uid://cwn4x5ftgfp7g" path="res://Scenes/Candy.tscn" id="2_bxqei"]
+[ext_resource type="PackedScene" uid="uid://dd3ao1k67tl4c" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" uid="uid://buqt4kekqx2fd" path="res://assets/Dirt.tscn" id="1_o8okg"]
+[ext_resource type="Texture2D" uid="uid://cpshlgthueqvw" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wlx23"]
+size = Vector2(95, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjtef"]
+albedo_texture = ExtResource("3_ufobr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ds4ho"]
+size = Vector3(100, 95, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_58846"]
+albedo_texture = ExtResource("3_ufobr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5ws7"]
+albedo_texture = ExtResource("3_ufobr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cim0h"]
+albedo_texture = ExtResource("3_ufobr")
 
 [node name="maze" type="Node3D"]
-script = ExtResource("1_j28gf")
 
-[node name="GameTimer" type="Timer" parent="."]
-autostart = true
+[node name="CornMaze" type="Node3D" parent="."]
 
-[node name="Candy" parent="." instance=ExtResource("2_bxqei")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 13.3211, 0)
+[node name="Sketchfab_Scene10" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 29.6393, -1.04767, 0)
 
-[connection signal="timeout" from="GameTimer" to="." method="_on_GameTimerTimeout"]
+[node name="Sketchfab_Scene5" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.8246, -1.04767, 0)
+
+[node name="Sketchfab_Scene3" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.39982, -1.04767, 0)
+
+[node name="Sketchfab_Scene" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1.04767, 0)
+
+[node name="Sketchfab_Scene253" parent="CornMaze" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -5.31105)
+
+[node name="Sketchfab_Scene2" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.95285, -1.04767, 0)
+
+[node name="Sketchfab_Scene4" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 5.02071, -1.04767, 0)
+
+[node name="Sketchfab_Scene6" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18.7775, -1.04767, 0)
+
+[node name="Sketchfab_Scene7" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.2244, -1.04767, 0)
+
+[node name="Sketchfab_Scene8" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 15.8453, -1.04767, 0)
+
+[node name="Sketchfab_Scene9" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 21.6865, -1.04767, 0)
+
+[node name="Sketchfab_Scene11" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.0863, -1.04767, 0)
+
+[node name="Sketchfab_Scene12" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 26.7072, -1.04767, 0)
+
+[node name="Sketchfab_Scene13" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 32.2266, -1.04767, 0)
+
+[node name="Sketchfab_Scene14" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 40.1794, -1.04767, 0)
+
+[node name="Sketchfab_Scene15" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.6264, -1.04767, 0)
+
+[node name="Sketchfab_Scene16" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 37.2473, -1.04767, 0)
+
+[node name="Sketchfab_Scene17" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.6237, -1.04767, 0)
+
+[node name="Sketchfab_Scene18" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 50.5766, -1.04767, 0)
+
+[node name="Sketchfab_Scene19" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 45.0236, -1.04767, 0)
+
+[node name="Sketchfab_Scene20" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 47.6444, -1.04767, 0)
+
+[node name="Sketchfab_Scene21" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.1219, -1.04767, -0.0746231)
+
+[node name="Sketchfab_Scene22" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.0748, -1.04767, 0)
+
+[node name="Sketchfab_Scene23" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.5217, -1.04767, 0)
+
+[node name="Sketchfab_Scene24" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 58.1426, -1.04767, 0)
+
+[node name="Sketchfab_Scene25" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 63.7729, -1.04767, 0)
+
+[node name="Sketchfab_Scene26" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene27" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.95285, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene28" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.39982, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene29" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 5.02071, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene30" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.8246, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene31" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18.7775, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene32" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.2244, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene33" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 15.8453, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene35" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 29.6393, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene36" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.0863, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene37" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 26.7072, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene38" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 32.2266, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene39" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 40.1794, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene40" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.6264, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene41" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 37.2473, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene42" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.6237, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene43" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 50.5766, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene44" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 45.0236, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene45" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 47.6444, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene46" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.1219, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene47" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.0748, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene48" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.5217, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene49" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 58.1426, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene50" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 63.7729, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene51" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4946, -1.04767, -0.310123)
+
+[node name="Sketchfab_Scene52" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4528, -1.04767, -8.26286)
+
+[node name="Sketchfab_Scene53" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.482, -1.04767, -2.70991)
+
+[node name="Sketchfab_Scene54" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.4682, -1.04767, -5.33076)
+
+[node name="Sketchfab_Scene55" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4377, -1.04767, -11.1346)
+
+[node name="Sketchfab_Scene56" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3959, -1.04767, -19.0873)
+
+[node name="Sketchfab_Scene57" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4251, -1.04767, -13.5344)
+
+[node name="Sketchfab_Scene58" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.4113, -1.04767, -16.1552)
+
+[node name="Sketchfab_Scene59" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3807, -1.04767, -21.9963)
+
+[node name="Sketchfab_Scene60" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3389, -1.04767, -29.949)
+
+[node name="Sketchfab_Scene62" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.3543, -1.04767, -27.0169)
+
+[node name="Sketchfab_Scene63" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3253, -1.04767, -32.5362)
+
+[node name="Sketchfab_Scene64" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2835, -1.04767, -40.489)
+
+[node name="Sketchfab_Scene65" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3127, -1.04767, -34.936)
+
+[node name="Sketchfab_Scene66" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.2989, -1.04767, -37.5569)
+
+[node name="Sketchfab_Scene67" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2707, -1.04767, -42.9333)
+
+[node name="Sketchfab_Scene68" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2289, -1.04767, -50.886)
+
+[node name="Sketchfab_Scene61" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.368, -1.04767, -24.3961)
+
+[node name="Sketchfab_Scene69" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2581, -1.04767, -45.3331)
+
+[node name="Sketchfab_Scene70" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.2443, -1.04767, -47.9539)
+
+[node name="Sketchfab_Scene73" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2029, -1.04767, -55.8311)
+
+[node name="Sketchfab_Scene71" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2155, -1.04767, -53.4313)
+
+[node name="Sketchfab_Scene34" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 21.6865, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene75" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.1595, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene76" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.658211, -1.04767, -0.310123)
+
+[node name="Sketchfab_Scene77" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.616425, -1.04767, -8.26286)
+
+[node name="Sketchfab_Scene80" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.601334, -1.04767, -11.1346)
+
+[node name="Sketchfab_Scene81" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.559555, -1.04767, -19.0873)
+
+[node name="Sketchfab_Scene82" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.58873, -1.04767, -13.5344)
+
+[node name="Sketchfab_Scene83" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.574951, -1.04767, -16.1552)
+
+[node name="Sketchfab_Scene84" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.544273, -1.04767, -21.9963)
+
+[node name="Sketchfab_Scene85" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.502487, -1.04767, -29.949)
+
+[node name="Sketchfab_Scene86" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.53167, -1.04767, -24.3961)
+
+[node name="Sketchfab_Scene87" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.517899, -1.04767, -27.0169)
+
+[node name="Sketchfab_Scene88" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.488899, -1.04767, -32.5362)
+
+[node name="Sketchfab_Scene89" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.447128, -1.04767, -40.489)
+
+[node name="Sketchfab_Scene90" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.476288, -1.04767, -34.936)
+
+[node name="Sketchfab_Scene91" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.462532, -1.04767, -37.5569)
+
+[node name="Sketchfab_Scene92" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.434273, -1.04767, -42.9333)
+
+[node name="Sketchfab_Scene93" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.392502, -1.04767, -50.886)
+
+[node name="Sketchfab_Scene94" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.421677, -1.04767, -45.3331)
+
+[node name="Sketchfab_Scene95" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.407913, -1.04767, -47.9539)
+
+[node name="Sketchfab_Scene96" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.379128, -1.04767, -53.4313)
+
+[node name="Sketchfab_Scene97" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.337357, -1.04767, -61.384)
+
+[node name="Sketchfab_Scene98" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.366516, -1.04767, -55.8311)
+
+[node name="Sketchfab_Scene99" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.35276, -1.04767, -58.4519)
+
+[node name="Sketchfab_Scene100" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.323166, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene78" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 19.5183, -1.04767, -2.82431)
+
+[node name="Sketchfab_Scene101" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 19.5164, -1.04767, -5.69607)
+
+[node name="Sketchfab_Scene102" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 7.61061, -1.04767, -61.3817)
+
+[node name="Sketchfab_Scene103" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 7.61061, -1.04767, -58.3605)
+
+[node name="Sketchfab_Scene72" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 23.0912, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene74" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 20.159, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene79" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 25.6784, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene104" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 28.0783, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene105" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 30.6781, -1.04767, -8.88301)
+
+[node name="Sketchfab_Scene106" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 33.2136, -1.04767, -8.26286)
+
+[node name="Sketchfab_Scene107" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 33.1985, -1.04767, -11.1346)
+
+[node name="Sketchfab_Scene108" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 33.1985, -1.04767, -14.2156)
+
+[node name="Sketchfab_Scene109" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 50.7453, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene110" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 47.8132, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene111" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.3326, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene112" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.7324, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene113" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 58.3323, -1.04767, -8.88301)
+
+[node name="Sketchfab_Scene114" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 58.7824, -1.04767, -11.1346)
+
+[node name="Sketchfab_Scene115" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 58.7824, -1.04767, -14.2156)
+
+[node name="Sketchfab_Scene116" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.0748, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene117" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 63.7729, -1.04767, -64.2435)
+
+[node name="Sketchfab_Scene118" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.1595, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene119" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -55.1687)
+
+[node name="Sketchfab_Scene120" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -55.0074)
+
+[node name="Sketchfab_Scene121" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -55.1687)
+
+[node name="Sketchfab_Scene122" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -55.0074)
+
+[node name="Sketchfab_Scene123" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.0022, -1.04767, -55.0074)
+
+[node name="Sketchfab_Scene124" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -47.1602)
+
+[node name="Sketchfab_Scene125" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -46.9989)
+
+[node name="Sketchfab_Scene126" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -47.1602)
+
+[node name="Sketchfab_Scene127" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -46.9989)
+
+[node name="Sketchfab_Scene128" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.0022, -1.04767, -46.9989)
+
+[node name="Sketchfab_Scene129" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -29.047)
+
+[node name="Sketchfab_Scene130" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -28.8857)
+
+[node name="Sketchfab_Scene131" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -29.047)
+
+[node name="Sketchfab_Scene132" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -28.8857)
+
+[node name="Sketchfab_Scene133" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.0022, -1.04767, -28.8857)
+
+[node name="Sketchfab_Scene134" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.2034, -1.04767, -16.0453)
+
+[node name="Sketchfab_Scene135" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 59.1896, -1.04767, -18.6662)
+
+[node name="Sketchfab_Scene136" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.2034, -1.04767, -20.9615)
+
+[node name="Sketchfab_Scene137" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 59.1896, -1.04767, -23.5824)
+
+[node name="Sketchfab_Scene138" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 59.1896, -1.04767, -26.3477)
+
+[node name="Sketchfab_Scene139" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.163, -1.04767, -22.0118)
+
+[node name="Sketchfab_Scene140" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.5497, -1.04767, -21.8505)
+
+[node name="Sketchfab_Scene141" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.163, -1.04767, -22.0118)
+
+[node name="Sketchfab_Scene142" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.5497, -1.04767, -21.8505)
+
+[node name="Sketchfab_Scene143" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 52.8254, -1.04767, -21.8505)
+
+[node name="Sketchfab_Scene144" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5.73647, -1.04767, -50.7036)
+
+[node name="Sketchfab_Scene145" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 2.80433, -1.04767, -50.3967)
+
+[node name="Sketchfab_Scene146" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.32374, -1.04767, -50.7036)
+
+[node name="Sketchfab_Scene147" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.7236, -1.04767, -50.7036)
+
+[node name="Sketchfab_Scene148" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 13.3234, -1.04767, -50.6574)
+
+[node name="Sketchfab_Scene149" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.01789, -1.04767, -39.8531)
+
+[node name="Sketchfab_Scene150" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43882, -1.04767, -41.6828)
+
+[node name="Sketchfab_Scene151" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -44.3036)
+
+[node name="Sketchfab_Scene152" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43882, -1.04767, -46.599)
+
+[node name="Sketchfab_Scene153" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -49.2198)
+
+[node name="Sketchfab_Scene154" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 15.3966, -1.04767, -51.1225)
+
+[node name="Sketchfab_Scene155" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.932, -1.04767, -50.5023)
+
+[node name="Sketchfab_Scene156" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.9169, -1.04767, -53.3741)
+
+[node name="Sketchfab_Scene157" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.9169, -1.04767, -56.4551)
+
+[node name="Sketchfab_Scene158" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 45.5677, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene159" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 43.0973, -1.04767, -8.9292)
+
+[node name="Sketchfab_Scene160" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.0876, -1.04767, -49.7943)
+
+[node name="Sketchfab_Scene161" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 44.4874, -1.04767, -49.7943)
+
+[node name="Sketchfab_Scene162" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 47.0873, -1.04767, -49.7481)
+
+[node name="Sketchfab_Scene163" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 49.6228, -1.04767, -49.128)
+
+[node name="Sketchfab_Scene164" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 49.6077, -1.04767, -51.9997)
+
+[node name="Sketchfab_Scene165" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 49.6077, -1.04767, -55.0807)
+
+[node name="Sketchfab_Scene166" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 48.7143, -1.04767, -41.6904)
+
+[node name="Sketchfab_Scene167" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 51.1141, -1.04767, -41.6904)
+
+[node name="Sketchfab_Scene168" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 53.714, -1.04767, -41.6442)
+
+[node name="Sketchfab_Scene169" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.2494, -1.04767, -41.024)
+
+[node name="Sketchfab_Scene170" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.2343, -1.04767, -43.8958)
+
+[node name="Sketchfab_Scene171" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.2343, -1.04767, -46.9768)
+
+[node name="Sketchfab_Scene172" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 44.3544, -1.04767, -41.6904)
+
+[node name="Sketchfab_Scene173" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 43.7048, -1.04767, -41.6904)
+
+[node name="Sketchfab_Scene174" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 46.661, -1.04767, -41.024)
+
+[node name="Sketchfab_Scene175" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 42.8919, -1.04767, -43.096)
+
+[node name="Sketchfab_Scene176" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 42.8768, -1.04767, -45.9677)
+
+[node name="Sketchfab_Scene177" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 42.8768, -1.04767, -49.0487)
+
+[node name="Sketchfab_Scene178" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.0466, -1.04767, -55.4308)
+
+[node name="Sketchfab_Scene179" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 36.4464, -1.04767, -55.4308)
+
+[node name="Sketchfab_Scene180" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 39.0463, -1.04767, -55.3846)
+
+[node name="Sketchfab_Scene181" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 41.5817, -1.04767, -54.7645)
+
+[node name="Sketchfab_Scene182" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 41.5666, -1.04767, -57.6362)
+
+[node name="Sketchfab_Scene183" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 41.5666, -1.04767, -60.7172)
+
+[node name="Sketchfab_Scene184" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 31.7862, -1.04767, -54.6852)
+
+[node name="Sketchfab_Scene185" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3604, -1.04767, -30.8335)
+
+[node name="Sketchfab_Scene186" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3453, -1.04767, -33.7052)
+
+[node name="Sketchfab_Scene187" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3035, -1.04767, -41.6579)
+
+[node name="Sketchfab_Scene188" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3327, -1.04767, -36.105)
+
+[node name="Sketchfab_Scene189" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 32.3189, -1.04767, -38.7259)
+
+[node name="Sketchfab_Scene190" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.2882, -1.04767, -44.5669)
+
+[node name="Sketchfab_Scene191" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.2465, -1.04767, -52.5196)
+
+[node name="Sketchfab_Scene192" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.2756, -1.04767, -46.9667)
+
+[node name="Sketchfab_Scene193" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 32.2619, -1.04767, -49.5875)
+
+[node name="Sketchfab_Scene194" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3289, -1.04767, -23.7908)
+
+[node name="Sketchfab_Scene195" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3138, -1.04767, -26.6625)
+
+[node name="Sketchfab_Scene196" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3012, -1.04767, -29.0623)
+
+[node name="Sketchfab_Scene197" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 37.0131, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene198" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 34.081, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene199" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, -0.00397935, 0, 3, 0, 0.00397935, 0, 3, 39.6004, -1.04767, -30.5296)
+
+[node name="Sketchfab_Scene200" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, -0.00397935, 0, 3, 0, 0.00397935, 0, 3, 42.0002, -1.04767, -30.5264)
+
+[node name="Sketchfab_Scene201" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00193729, 0, 3, 0, 3, 0, -3, 0, 0.00193729, 44.6001, -1.04767, -30.4768)
+
+[node name="Sketchfab_Scene202" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 31.8355, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene203" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 29.3651, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene204" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 46.7479, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene205" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 49.1477, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene206" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 51.7476, -1.04767, -30.4801)
+
+[node name="Sketchfab_Scene207" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.1064, -1.04767, -21.7655)
+
+[node name="Sketchfab_Scene208" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.1064, -1.04767, -24.8466)
+
+[node name="Sketchfab_Scene209" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.5273, -1.04767, -26.6763)
+
+[node name="Sketchfab_Scene210" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 44.5136, -1.04767, -29.2971)
+
+[node name="Sketchfab_Scene211" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 46.5642, -1.04767, -16.5272)
+
+[node name="Sketchfab_Scene212" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.1064, -1.04767, -16.2976)
+
+[node name="Sketchfab_Scene213" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.5273, -1.04767, -18.1273)
+
+[node name="Sketchfab_Scene214" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 44.5136, -1.04767, -20.7482)
+
+[node name="Sketchfab_Scene215" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 48.8753, -1.04767, -16.5272)
+
+[node name="Sketchfab_Scene216" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 51.1866, -1.04767, -16.5272)
+
+[node name="Sketchfab_Scene217" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 26.6521, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene218" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 22.8974, -1.04767, -30.5263)
+
+[node name="Sketchfab_Scene219" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 27.6035, -1.04767, -55.4308)
+
+[node name="Sketchfab_Scene220" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 30.0033, -1.04767, -55.4308)
+
+[node name="Sketchfab_Scene221" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 32.6032, -1.04767, -55.3846)
+
+[node name="Sketchfab_Scene222" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.3432, -1.04767, -54.6852)
+
+[node name="Sketchfab_Scene223" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.4873, -1.04767, -47.0835)
+
+[node name="Sketchfab_Scene224" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.5165, -1.04767, -41.5305)
+
+[node name="Sketchfab_Scene225" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 25.5027, -1.04767, -44.1514)
+
+[node name="Sketchfab_Scene226" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.4721, -1.04767, -49.9924)
+
+[node name="Sketchfab_Scene227" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.4595, -1.04767, -52.3922)
+
+[node name="Sketchfab_Scene228" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18.314, -1.04767, -37.0706)
+
+[node name="Sketchfab_Scene229" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20.7138, -1.04767, -37.0706)
+
+[node name="Sketchfab_Scene230" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 23.3137, -1.04767, -37.0244)
+
+[node name="Sketchfab_Scene231" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.8491, -1.04767, -36.4042)
+
+[node name="Sketchfab_Scene232" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.834, -1.04767, -39.276)
+
+[node name="Sketchfab_Scene233" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 14.0819, -1.04767, -25.9024)
+
+[node name="Sketchfab_Scene234" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 19.7789, -1.04767, -24.4794)
+
+[node name="Sketchfab_Scene235" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6654, -1.04767, -21.9982)
+
+[node name="Sketchfab_Scene236" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 30.3627, -1.04767, -14.7082)
+
+[node name="Sketchfab_Scene237" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 17.6808, -1.04767, -19.0661)
+
+[node name="Sketchfab_Scene238" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6501, -1.04767, -24.9071)
+
+[node name="Sketchfab_Scene239" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6083, -1.04767, -32.8599)
+
+[node name="Sketchfab_Scene240" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6375, -1.04767, -27.3069)
+
+[node name="Sketchfab_Scene241" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 17.6237, -1.04767, -29.9278)
+
+[node name="Sketchfab_Scene242" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.5947, -1.04767, -35.4471)
+
+[node name="Sketchfab_Scene243" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.01172, -1.04767, -13.3268)
+
+[node name="Sketchfab_Scene244" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43265, -1.04767, -15.1566)
+
+[node name="Sketchfab_Scene245" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.41887, -1.04767, -17.7774)
+
+[node name="Sketchfab_Scene246" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43265, -1.04767, -20.0727)
+
+[node name="Sketchfab_Scene247" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.41887, -1.04767, -22.7217)
+
+[node name="Sketchfab_Scene248" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43265, -1.04767, -25.017)
+
+[node name="Sketchfab_Scene249" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 10.8841, -1.04767, -25.9024)
+
+[node name="Sketchfab_Scene250" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99997, 0, 0.0129328, 0, 3, 0, -0.0129328, 0, 2.99997, 23.0888, -1.04766, -24.62)
+
+[node name="Sketchfab_Scene251" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99997, 0, 0.0129328, 0, 3, 0, -0.0129328, 0, 2.99997, 25.6761, -1.04766, -24.6312)
+
+[node name="Sketchfab_Scene252" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(2.99997, 0, 0.0129328, 0, 3, 0, -0.0129328, 0, 2.99997, 25.6491, -1.04766, -22.6364)
+
+[node name="Sketchfab_Scene254" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.8726, -1.04767, -19.6407)
+
+[node name="Sketchfab_Scene255" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.01789, -1.04767, -33.7023)
+
+[node name="Sketchfab_Scene256" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43882, -1.04767, -35.532)
+
+[node name="Sketchfab_Scene257" parent="CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -38.1529)
+
+[node name="DirtFloor" type="Node3D" parent="."]
+
+[node name="Sketchfab_Scene264" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.6619, 0, -17.2938)
+
+[node name="Sketchfab_Scene263" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -17.2938)
+
+[node name="Sketchfab_Scene262" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 65.0969, 0, -5.31105)
+
+[node name="Sketchfab_Scene261" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53.2543, 0, -5.31105)
+
+[node name="Sketchfab_Scene260" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.4398, 0, -5.31105)
+
+[node name="Sketchfab_Scene258" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.899, 0, -5.31105)
+
+[node name="Sketchfab_Scene259" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.5627, 0, -5.31105)
+
+[node name="Sketchfab_Scene265" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4451, 0, -17.2938)
+
+[node name="Sketchfab_Scene266" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.17, 0, -17.2938)
+
+[node name="Sketchfab_Scene267" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.7774, 0, -17.2938)
+
+[node name="Sketchfab_Scene269" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -29.1278)
+
+[node name="Sketchfab_Scene270" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.7912, 0, -29.1278)
+
+[node name="Sketchfab_Scene271" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4256, 0, -29.1278)
+
+[node name="Sketchfab_Scene272" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.1194, 0, -29.1278)
+
+[node name="Sketchfab_Scene273" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.9988, 0, -29.1278)
+
+[node name="Sketchfab_Scene274" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.8847, 0, -29.1278)
+
+[node name="Sketchfab_Scene275" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -40.7703)
+
+[node name="Sketchfab_Scene276" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.6637, 0, -40.7703)
+
+[node name="Sketchfab_Scene277" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.2368, 0, -40.7703)
+
+[node name="Sketchfab_Scene279" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.8731, 0, -40.7703)
+
+[node name="Sketchfab_Scene278" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.1802, 0, -40.7703)
+
+[node name="Sketchfab_Scene280" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.318, 0, -40.7703)
+
+[node name="Sketchfab_Scene281" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -52.6064)
+
+[node name="Sketchfab_Scene282" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.7311, 0, -52.6064)
+
+[node name="Sketchfab_Scene283" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4271, 0, -52.6064)
+
+[node name="Sketchfab_Scene284" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 40.8174, 0, -52.6064)
+
+[node name="Sketchfab_Scene285" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.6337, 0, -52.6064)
+
+[node name="Sketchfab_Scene286" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.2589, 0, -52.6064)
+
+[node name="Sketchfab_Scene287" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -64.5053)
+
+[node name="Sketchfab_Scene288" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.671, 0, -64.5053)
+
+[node name="Sketchfab_Scene289" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4974, 0, -64.5053)
+
+[node name="Sketchfab_Scene290" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.0746, 0, -64.5053)
+
+[node name="Sketchfab_Scene291" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53.0196, 0, -64.5053)
+
+[node name="Sketchfab_Scene292" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.7062, 0, -64.5053)
+
+[node name="Sketchfab_Scene293" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -76.2067)
+
+[node name="Sketchfab_Scene294" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.9198, 0, -76.2067)
+
+[node name="Sketchfab_Scene295" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.7106, 0, -76.2067)
+
+[node name="Sketchfab_Scene296" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.6797, 0, -76.2067)
+
+[node name="Sketchfab_Scene297" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53.6508, 0, -76.2067)
+
+[node name="Sketchfab_Scene298" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 65.6248, 0, -76.2067)
+
+[node name="Sketchfab_Scene299" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 77.134, 0, -76.2067)
+
+[node name="Sketchfab_Scene300" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.435, 0, -64.215)
+
+[node name="Sketchfab_Scene303" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -28.6435)
+
+[node name="Sketchfab_Scene302" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -40.4574)
+
+[node name="Sketchfab_Scene304" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -16.7252)
+
+[node name="Sketchfab_Scene305" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -4.96593)
+
+[node name="Sketchfab_Scene306" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, 6.55481)
+
+[node name="Sketchfab_Scene301" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -52.3184)
+
+[node name="Sketchfab_Scene307" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.3578, 0, 6.55481)
+
+[node name="Sketchfab_Scene308" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.5599, 0, 6.55481)
+
+[node name="Sketchfab_Scene310" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 28.7957, 0, 6.55481)
+
+[node name="Sketchfab_Scene309" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 40.6268, 0, 6.55481)
+
+[node name="Sketchfab_Scene311" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.9561, 0, 6.55481)
+
+[node name="Sketchfab_Scene313" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.9767, 0, 6.55481)
+
+[node name="Sketchfab_Scene312" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.09375, 0, 6.55481)
+
+[node name="Sketchfab_Scene314" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.01021, 0, -5.36106)
+
+[node name="Sketchfab_Scene315" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.03942, 0, -17.2111)
+
+[node name="Sketchfab_Scene316" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.8862, 0, -29.1383)
+
+[node name="Sketchfab_Scene317" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.87126, 0, -41.0217)
+
+[node name="Sketchfab_Scene318" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.91329, 0, -52.8339)
+
+[node name="Sketchfab_Scene319" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.13029, 0, -64.7873)
+
+[node name="Sketchfab_Scene320" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.21318, 0, -76.3081)
+
+[node name="Sketchfab_Scene268" parent="DirtFloor" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.9404, 0, -17.2938)
+
+[node name="Floor" type="StaticBody3D" parent="DirtFloor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DirtFloor/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, -35)
+shape = SubResource("BoxShape3D_oud8t")
+
+[node name="Scenery" type="Node3D" parent="."]
+
+[node name="Wall1" type="StaticBody3D" parent="Scenery"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scenery/Wall1"]
+transform = Transform3D(-4.37114e-08, -1, 0, 0.0149394, -6.53023e-10, -0.999888, 0.999888, -4.37065e-08, 0.0149394, 80, 49, -35)
+layers = 3
+mesh = SubResource("PlaneMesh_wlx23")
+surface_material_override/0 = SubResource("StandardMaterial3D_xjtef")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+shape = SubResource("BoxShape3D_ds4ho")
+
+[node name="Wall2" type="StaticBody3D" parent="Scenery"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 68.295, -2.0817, -68.9302)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scenery/Wall2"]
+transform = Transform3D(-1.31126e-07, -1, 8.61945e-08, 0.0140494, -8.80283e-08, -0.999901, 0.999901, -1.29902e-07, 0.0140494, 80.0751, 49, -35)
+layers = 3
+material_override = SubResource("StandardMaterial3D_58846")
+mesh = SubResource("PlaneMesh_wlx23")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+shape = SubResource("BoxShape3D_ds4ho")
+
+[node name="Wall3" type="StaticBody3D" parent="Scenery"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 69.1227, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scenery/Wall3"]
+transform = Transform3D(-8.74225e-08, -1, 4.35641e-08, 0.00336845, -4.38584e-08, -0.999994, 0.999994, -8.72753e-08, 0.00336845, 80, 49, -35)
+layers = 3
+material_override = SubResource("StandardMaterial3D_h5ws7")
+mesh = SubResource("PlaneMesh_wlx23")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall3"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+shape = SubResource("BoxShape3D_ds4ho")
+
+[node name="Wall4" type="StaticBody3D" parent="Scenery"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -3.48168, -67.615)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scenery/Wall4"]
+transform = Transform3D(-2.91323e-11, -1, -4.5307e-08, -0.0365042, 4.52779e-08, -0.999334, 0.999334, 1.62478e-09, -0.0365042, 80, 49, -35)
+layers = 3
+material_override = SubResource("StandardMaterial3D_cim0h")
+mesh = SubResource("PlaneMesh_wlx23")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/Wall4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 80, 49, -35)
+shape = SubResource("BoxShape3D_ds4ho")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.34, 50.7494, -29.6072)
+light_color = Color(0.801336, 0.999124, 1, 1)
+omni_range = 40.0
+
+[node name="player" parent="." instance=ExtResource("4_0xims")]
+transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, -3.23598, -0.404661, -3.46089)
+platform_wall_layers = 65535
