@@ -20,3 +20,8 @@ mesh = SubResource("BoxMesh_i6b30")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="walls/floor"]
 shape = SubResource("BoxShape3D_jacht")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62213, 35.569, 21.6477)
+light_energy = 16.0
+omni_range = 308.312

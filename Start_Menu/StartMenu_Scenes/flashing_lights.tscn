@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c80olc41m7av4"]
+
+[ext_resource type="Script" path="res://Start_Menu/StartMenu_Scripts/flashing_lights.gd" id="1_xxt2u"]
+
+[node name="Flashing_Lights" type="SpotLight3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_xxt2u")

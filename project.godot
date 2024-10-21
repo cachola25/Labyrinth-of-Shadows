@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="labyrinth_of_shadows"
-run/main_scene="res://maze.tscn"
+run/main_scene="res://Start_Menu/StartMenu_Scenes/menu_components.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="labyrinth_of_shadows"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

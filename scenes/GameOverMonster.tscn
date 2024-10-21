@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bomwgdv5ovu02"]
+
+[ext_resource type="PackedScene" uid="uid://mvujr0bhd6km" path="res://monster.blend" id="1_fmquj"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="monster" parent="." instance=ExtResource("1_fmquj")]
+transform = Transform3D(0.621471, 0, 0, 0, 0.621471, 0, 0, 0, 0.621471, 0.0531547, 0, 0.149536)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.962121, 0, 0, 0, 3.7072, 0, 0, 0, -0.552985, 0, 1, -2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, 0, 2.38419e-07)
+omni_range = 3.526
