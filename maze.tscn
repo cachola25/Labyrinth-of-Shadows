@@ -1,966 +1,2768 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=5 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="PackedScene" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
+[ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="3_1w0rl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1rfcj"]
 
 [node name="maze" type="Node3D"]
 
-[node name="Sketchfab_Scene253" parent="." instance=ExtResource("1_o8okg")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -5.31105)
+[node name="corn_scenes" type="Node3D" parent="."]
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_fwotj")]
+[node name="Sketchfab_Scene" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1.04767, 0)
 
-[node name="Sketchfab_Scene2" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene2" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.95285, -1.04767, 0)
 
-[node name="Sketchfab_Scene3" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene2"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene2/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene2/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene3" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.39982, -1.04767, 0)
 
-[node name="Sketchfab_Scene4" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene3"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene3/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene3/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene4" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 5.02071, -1.04767, 0)
 
-[node name="Sketchfab_Scene5" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene4/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene4/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene5" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.8246, -1.04767, 0)
 
-[node name="Sketchfab_Scene6" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene5"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene5/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene5/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene6" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18.7775, -1.04767, 0)
 
-[node name="Sketchfab_Scene7" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene6"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene6/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene6/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene7" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.2244, -1.04767, 0)
 
-[node name="Sketchfab_Scene8" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene7"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene7/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene7/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene8" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 15.8453, -1.04767, 0)
 
-[node name="Sketchfab_Scene9" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene8"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene8/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene8/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene9" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 21.6865, -1.04767, 0)
 
-[node name="Sketchfab_Scene10" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene9"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene9/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene9/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene10" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 29.6393, -1.04767, 0)
 
-[node name="Sketchfab_Scene11" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene10"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene10/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene10/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene11" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.0863, -1.04767, 0)
 
-[node name="Sketchfab_Scene12" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene11"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene11/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene11/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene12" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 26.7072, -1.04767, 0)
 
-[node name="Sketchfab_Scene13" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene12"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene12/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene12/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene13" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 32.2266, -1.04767, 0)
 
-[node name="Sketchfab_Scene14" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene13"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene13/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene13/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene14" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 40.1794, -1.04767, 0)
 
-[node name="Sketchfab_Scene15" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene14"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene14/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene14/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene15" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.6264, -1.04767, 0)
 
-[node name="Sketchfab_Scene16" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene15"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene15/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene15/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene16" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 37.2473, -1.04767, 0)
 
-[node name="Sketchfab_Scene17" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene16"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene16/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene16/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene17" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.6237, -1.04767, 0)
 
-[node name="Sketchfab_Scene18" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene17"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene17/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene17/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene18" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 50.5766, -1.04767, 0)
 
-[node name="Sketchfab_Scene19" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene18"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene18/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene18/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene19" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 45.0236, -1.04767, 0)
 
-[node name="Sketchfab_Scene20" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene19"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene19/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene19/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene20" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 47.6444, -1.04767, 0)
 
-[node name="Sketchfab_Scene21" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene20"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene20/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene20/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene21" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.1219, -1.04767, -0.0746231)
 
-[node name="Sketchfab_Scene22" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene21"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene21/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene21/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene22" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.0748, -1.04767, 0)
 
-[node name="Sketchfab_Scene23" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene22"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene22/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene22/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene23" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.5217, -1.04767, 0)
 
-[node name="Sketchfab_Scene24" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene23"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene23/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene23/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene24" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 58.1426, -1.04767, 0)
 
-[node name="Sketchfab_Scene25" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene24"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene24/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene24/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene25" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 63.7729, -1.04767, 0)
 
-[node name="Sketchfab_Scene26" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene25"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene25/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene25/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene26" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene27" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene26"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene26/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene26/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene27" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.95285, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene28" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene27"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene27/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene27/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene28" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.39982, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene29" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene28"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene28/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene28/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene29" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 5.02071, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene30" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene29"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene29/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene29/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene30" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.8246, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene31" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene30"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene30/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene30/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene31" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18.7775, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene32" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene31"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene31/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene31/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene32" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.2244, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene33" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene32"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene32/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene32/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene33" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 15.8453, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene34" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene33"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene33/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene33/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene34" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 21.6865, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene35" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene34"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene34/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene34/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene35" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 29.6393, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene36" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene35"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene35/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene35/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene36" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.0863, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene37" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene36"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene36/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene36/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene37" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 26.7072, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene38" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene37"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene37/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene37/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene38" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 32.2266, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene39" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene38"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene38/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene38/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene39" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 40.1794, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene40" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene39"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene39/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene39/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene40" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.6264, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene41" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene40"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene40/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene40/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene41" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 37.2473, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene42" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene41"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene41/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene41/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene42" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.6237, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene43" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene42"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene42/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene42/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene43" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 50.5766, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene44" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene43"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene43/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene43/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene44" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 45.0236, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene45" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene44"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene44/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene44/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene45" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 47.6444, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene46" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene45"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene45/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene45/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene46" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.1219, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene47" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene46"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene46/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene46/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene47" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.0748, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene48" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene47"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene47/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene47/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene48" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.5217, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene49" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene48"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene48/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene48/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene49" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 58.1426, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene50" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene49"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene49/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene49/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene50" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 63.7729, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene51" parent="." instance=ExtResource("1_fwotj")]
-transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4946, -1.04767, -0.310123)
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene50"]
 
-[node name="Sketchfab_Scene52" parent="." instance=ExtResource("1_fwotj")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene50/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene50/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene51" parent="corn_scenes" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4686, -1.04767, -0.221344)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene51"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene51/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene51/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene52" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4528, -1.04767, -8.26286)
 
-[node name="Sketchfab_Scene53" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene52"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene52/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene52/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene53" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.482, -1.04767, -2.70991)
 
-[node name="Sketchfab_Scene54" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene53"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene53/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene53/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene54" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.4682, -1.04767, -5.33076)
 
-[node name="Sketchfab_Scene55" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene54"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene54/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene54/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene55" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4377, -1.04767, -11.1346)
 
-[node name="Sketchfab_Scene56" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene55"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene55/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene55/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene56" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3959, -1.04767, -19.0873)
 
-[node name="Sketchfab_Scene57" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene56"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene56/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene56/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene57" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.4251, -1.04767, -13.5344)
 
-[node name="Sketchfab_Scene58" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene57"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene57/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene57/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene58" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.4113, -1.04767, -16.1552)
 
-[node name="Sketchfab_Scene59" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene58"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene58/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene58/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene59" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3807, -1.04767, -21.9963)
 
-[node name="Sketchfab_Scene60" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene59"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene59/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene59/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene60" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3389, -1.04767, -29.949)
 
-[node name="Sketchfab_Scene61" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene60"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene60/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene60/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene61" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.368, -1.04767, -24.3961)
 
-[node name="Sketchfab_Scene62" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene61"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene61/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene61/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene62" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.3543, -1.04767, -27.0169)
 
-[node name="Sketchfab_Scene63" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene62"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene62/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene62/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene63" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3253, -1.04767, -32.5362)
 
-[node name="Sketchfab_Scene64" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene63"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene63/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene63/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene64" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2835, -1.04767, -40.489)
 
-[node name="Sketchfab_Scene65" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene64"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene64/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene64/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene65" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.3127, -1.04767, -34.936)
 
-[node name="Sketchfab_Scene66" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene65"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene65/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene65/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene66" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.2989, -1.04767, -37.5569)
 
-[node name="Sketchfab_Scene67" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene66"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene66/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene66/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene67" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2707, -1.04767, -42.9333)
 
-[node name="Sketchfab_Scene68" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene67"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene67/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene67/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene68" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2289, -1.04767, -50.886)
 
-[node name="Sketchfab_Scene69" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene68"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene68/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene68/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene69" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2581, -1.04767, -45.3331)
 
-[node name="Sketchfab_Scene70" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene69"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene69/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene69/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene70" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 65.2443, -1.04767, -47.9539)
 
-[node name="Sketchfab_Scene71" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene70"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene70/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene70/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene71" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2155, -1.04767, -53.4313)
 
-[node name="Sketchfab_Scene73" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene71"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene71/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene71/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene73" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.2029, -1.04767, -55.8311)
 
-[node name="Sketchfab_Scene75" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene73"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene73/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene73/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene75" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.1595, -1.04767, -64.0821)
 
-[node name="Sketchfab_Scene76" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene75"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene75/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene75/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene76" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.658211, -1.04767, -0.310123)
 
-[node name="Sketchfab_Scene77" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene76"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene76/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene76/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene77" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.616425, -1.04767, -8.26286)
 
-[node name="Sketchfab_Scene80" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene77"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene77/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene77/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene80" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.601334, -1.04767, -11.1346)
 
-[node name="Sketchfab_Scene81" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene80"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene80/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene80/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene81" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.559555, -1.04767, -19.0873)
 
-[node name="Sketchfab_Scene82" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene81"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene81/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene81/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene82" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.58873, -1.04767, -13.5344)
 
-[node name="Sketchfab_Scene83" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene82"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene82/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene82/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene83" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.574951, -1.04767, -16.1552)
 
-[node name="Sketchfab_Scene84" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene83"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene83/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene83/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene84" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.544273, -1.04767, -21.9963)
 
-[node name="Sketchfab_Scene85" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene84"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene84/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene84/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene85" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.502487, -1.04767, -29.949)
 
-[node name="Sketchfab_Scene86" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene85"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene85/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene85/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene86" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.53167, -1.04767, -24.3961)
 
-[node name="Sketchfab_Scene87" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene86"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene86/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene86/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene87" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.517899, -1.04767, -27.0169)
 
-[node name="Sketchfab_Scene88" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene87"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene87/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene87/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene88" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.488899, -1.04767, -32.5362)
 
-[node name="Sketchfab_Scene89" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene88"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene88/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene88/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene89" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.447128, -1.04767, -40.489)
 
-[node name="Sketchfab_Scene90" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene89"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene89/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene89/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene90" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.476288, -1.04767, -34.936)
 
-[node name="Sketchfab_Scene91" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene90"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene90/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene90/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene91" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.462532, -1.04767, -37.5569)
 
-[node name="Sketchfab_Scene92" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene91"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene91/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene91/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene92" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.434273, -1.04767, -42.9333)
 
-[node name="Sketchfab_Scene93" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene92"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene92/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene92/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene93" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.392502, -1.04767, -50.886)
 
-[node name="Sketchfab_Scene94" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene93"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene93/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene93/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene94" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.421677, -1.04767, -45.3331)
 
-[node name="Sketchfab_Scene95" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene94"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene94/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene94/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene95" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.407913, -1.04767, -47.9539)
 
-[node name="Sketchfab_Scene96" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene95"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene95/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene95/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene96" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.379128, -1.04767, -53.4313)
 
-[node name="Sketchfab_Scene97" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene96"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene96/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene96/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene97" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.337357, -1.04767, -61.384)
 
-[node name="Sketchfab_Scene98" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene97"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene97/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene97/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene98" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.366516, -1.04767, -55.8311)
 
-[node name="Sketchfab_Scene99" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene98"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene98/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene98/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene99" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 0.35276, -1.04767, -58.4519)
 
-[node name="Sketchfab_Scene100" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene99"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene99/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene99/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene100" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 0.323166, -1.04767, -64.0821)
 
-[node name="Sketchfab_Scene78" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene100"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene100/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene100/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene78" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 19.5183, -1.04767, -2.82431)
 
-[node name="Sketchfab_Scene101" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene78"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene78/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene78/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene101" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 19.5164, -1.04767, -5.69607)
 
-[node name="Sketchfab_Scene102" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene101"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene101/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene101/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene102" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 7.61061, -1.04767, -61.3817)
 
-[node name="Sketchfab_Scene103" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene102"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene102/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene102/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene103" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 7.61061, -1.04767, -58.3605)
 
-[node name="Sketchfab_Scene72" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene103"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene103/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene103/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene72" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 23.0912, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene74" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene72"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene72/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene72/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene74" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 20.159, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene79" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene74"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene74/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene74/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene79" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 25.6784, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene104" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene79"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene79/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene79/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene104" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 28.0783, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene105" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene104"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene104/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene104/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene105" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 30.6781, -1.04767, -8.88301)
 
-[node name="Sketchfab_Scene106" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene105"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene105/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene105/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene106" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 33.2136, -1.04767, -8.26286)
 
-[node name="Sketchfab_Scene107" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene106"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene106/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene106/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene107" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 33.1985, -1.04767, -11.1346)
 
-[node name="Sketchfab_Scene108" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene107"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene107/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene107/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene108" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 33.1985, -1.04767, -14.2156)
 
-[node name="Sketchfab_Scene109" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene108"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene108/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene108/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene109" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 50.7453, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene110" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene109"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene109/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene109/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene110" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 47.8132, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene111" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene110"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene110/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene110/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene111" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.3326, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene112" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene111"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene111/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene111/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene112" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.7324, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene113" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene112"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene112/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene112/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene113" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 58.3323, -1.04767, -8.88301)
 
-[node name="Sketchfab_Scene114" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene113"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene113/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene113/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene114" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 58.7824, -1.04767, -11.1346)
 
-[node name="Sketchfab_Scene115" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene114"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene114/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene114/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene115" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 58.7824, -1.04767, -14.2156)
 
-[node name="Sketchfab_Scene116" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene115"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene115/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene115/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene116" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.0748, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene117" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene116"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene116/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene116/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene117" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 63.7729, -1.04767, -64.2435)
 
-[node name="Sketchfab_Scene118" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene117"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene117/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene117/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene118" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 65.1595, -1.04767, -64.0821)
 
-[node name="Sketchfab_Scene119" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene118"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene118/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene118/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene119" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -55.1687)
 
-[node name="Sketchfab_Scene120" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene119"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene119/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene119/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene120" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -55.0074)
 
-[node name="Sketchfab_Scene121" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene120"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene120/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene120/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene121" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -55.1687)
 
-[node name="Sketchfab_Scene122" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene121"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene121/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene121/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene122" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -55.0074)
 
-[node name="Sketchfab_Scene123" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene122"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene122/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene122/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene123" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.0022, -1.04767, -55.0074)
 
-[node name="Sketchfab_Scene124" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene123"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene123/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene123/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene124" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -47.1602)
 
-[node name="Sketchfab_Scene125" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene124"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene124/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene124/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene125" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -46.9989)
 
-[node name="Sketchfab_Scene126" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene125"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene125/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene125/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene126" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -47.1602)
 
-[node name="Sketchfab_Scene127" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene126"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene126/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene126/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene127" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -46.9989)
 
-[node name="Sketchfab_Scene128" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene127"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene127/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene127/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene128" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.0022, -1.04767, -46.9989)
 
-[node name="Sketchfab_Scene129" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene128"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene128/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene128/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene129" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -29.047)
 
-[node name="Sketchfab_Scene130" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene129"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene129/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene129/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene130" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -28.8857)
 
-[node name="Sketchfab_Scene131" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene130"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene130/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene130/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene131" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 61.3398, -1.04767, -29.047)
 
-[node name="Sketchfab_Scene132" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene131"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene131/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene131/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene132" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 62.7265, -1.04767, -28.8857)
 
-[node name="Sketchfab_Scene133" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene132"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene132/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene132/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene133" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.0022, -1.04767, -28.8857)
 
-[node name="Sketchfab_Scene134" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene133"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene133/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene133/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene134" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.2034, -1.04767, -16.0453)
 
-[node name="Sketchfab_Scene135" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene134"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene134/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene134/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene135" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 59.1896, -1.04767, -18.6662)
 
-[node name="Sketchfab_Scene136" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene135"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene135/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene135/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene136" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 59.2034, -1.04767, -20.9615)
 
-[node name="Sketchfab_Scene137" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene136"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene136/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene136/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene137" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 59.1896, -1.04767, -23.5824)
 
-[node name="Sketchfab_Scene138" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene137"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene137/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene137/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene138" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 59.1896, -1.04767, -26.3477)
 
-[node name="Sketchfab_Scene139" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene138"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene138/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene138/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene139" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.163, -1.04767, -22.0118)
 
-[node name="Sketchfab_Scene140" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene139"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene139/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene139/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene140" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.5497, -1.04767, -21.8505)
 
-[node name="Sketchfab_Scene141" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene140"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene140/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene140/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene141" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.163, -1.04767, -22.0118)
 
-[node name="Sketchfab_Scene142" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene141"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene141/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene141/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene142" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.5497, -1.04767, -21.8505)
 
-[node name="Sketchfab_Scene143" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene142"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene142/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene142/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene143" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 52.8254, -1.04767, -21.8505)
 
-[node name="Sketchfab_Scene144" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene143"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene143/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene143/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene144" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 5.73647, -1.04767, -50.7036)
 
-[node name="Sketchfab_Scene145" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene144"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene144/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene144/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene145" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 2.80433, -1.04767, -50.3967)
 
-[node name="Sketchfab_Scene146" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene145"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene145/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene145/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene146" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.32374, -1.04767, -50.7036)
 
-[node name="Sketchfab_Scene147" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene146"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene146/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene146/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene147" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.7236, -1.04767, -50.7036)
 
-[node name="Sketchfab_Scene148" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene147"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene147/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene147/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene148" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 13.3234, -1.04767, -50.6574)
 
-[node name="Sketchfab_Scene149" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene148"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene148/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene148/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene149" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.01789, -1.04767, -39.8531)
 
-[node name="Sketchfab_Scene150" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene149"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene149/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene149/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene150" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43882, -1.04767, -41.6828)
 
-[node name="Sketchfab_Scene151" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene150"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene150/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene150/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene151" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -44.3036)
 
-[node name="Sketchfab_Scene152" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene151"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene151/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene151/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene152" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43882, -1.04767, -46.599)
 
-[node name="Sketchfab_Scene153" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene152"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene152/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene152/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene153" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -49.2198)
 
-[node name="Sketchfab_Scene154" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene153"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene153/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene153/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene154" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 15.3966, -1.04767, -51.1225)
 
-[node name="Sketchfab_Scene155" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene154"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene154/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene154/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene155" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.932, -1.04767, -50.5023)
 
-[node name="Sketchfab_Scene156" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene155"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene155/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene155/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene156" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.9169, -1.04767, -53.3741)
 
-[node name="Sketchfab_Scene157" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene156"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene156/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene156/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene157" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.9169, -1.04767, -56.4551)
 
-[node name="Sketchfab_Scene158" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene157"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene157/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene157/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene158" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 45.5677, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene159" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene158"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene158/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene158/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene159" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 43.0973, -1.04767, -8.9292)
 
-[node name="Sketchfab_Scene160" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene159"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene159/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene159/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene160" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.0876, -1.04767, -49.7943)
 
-[node name="Sketchfab_Scene161" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene160"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene160/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene160/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene161" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 44.4874, -1.04767, -49.7943)
 
-[node name="Sketchfab_Scene162" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene161"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene161/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene161/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene162" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 47.0873, -1.04767, -49.7481)
 
-[node name="Sketchfab_Scene163" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene162"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene162/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene162/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene163" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 49.6228, -1.04767, -49.128)
 
-[node name="Sketchfab_Scene164" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene163"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene163/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene163/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene164" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 49.6077, -1.04767, -51.9997)
 
-[node name="Sketchfab_Scene165" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene164"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene164/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene164/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene165" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 49.6077, -1.04767, -55.0807)
 
-[node name="Sketchfab_Scene166" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene165"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene165/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene165/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene166" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 48.7143, -1.04767, -41.6904)
 
-[node name="Sketchfab_Scene167" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene166"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene166/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene166/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene167" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 51.1141, -1.04767, -41.6904)
 
-[node name="Sketchfab_Scene168" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene167"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene167/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene167/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene168" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 53.714, -1.04767, -41.6442)
 
-[node name="Sketchfab_Scene169" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene168"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene168/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene168/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene169" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.2494, -1.04767, -41.024)
 
-[node name="Sketchfab_Scene170" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene169"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene169/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene169/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene170" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.2343, -1.04767, -43.8958)
 
-[node name="Sketchfab_Scene171" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene170"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene170/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene170/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene171" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 56.2343, -1.04767, -46.9768)
 
-[node name="Sketchfab_Scene172" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene171"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene171/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene171/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene172" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 44.3544, -1.04767, -41.6904)
 
-[node name="Sketchfab_Scene173" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene172"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene172/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene172/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene173" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 43.7048, -1.04767, -41.6904)
 
-[node name="Sketchfab_Scene174" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene173"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene173/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene173/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene174" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 46.661, -1.04767, -41.024)
 
-[node name="Sketchfab_Scene175" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene174"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene174/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene174/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene175" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 42.8919, -1.04767, -43.096)
 
-[node name="Sketchfab_Scene176" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene175"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene175/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene175/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene176" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 42.8768, -1.04767, -45.9677)
 
-[node name="Sketchfab_Scene177" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene176"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene176/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene176/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene177" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 42.8768, -1.04767, -49.0487)
 
-[node name="Sketchfab_Scene178" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene177"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene177/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene177/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene178" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.0466, -1.04767, -55.4308)
 
-[node name="Sketchfab_Scene179" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene178"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene178/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene178/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene179" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 36.4464, -1.04767, -55.4308)
 
-[node name="Sketchfab_Scene180" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene179"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene179/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene179/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene180" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 39.0463, -1.04767, -55.3846)
 
-[node name="Sketchfab_Scene181" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene180"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene180/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene180/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene181" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 41.5817, -1.04767, -54.7645)
 
-[node name="Sketchfab_Scene182" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene181"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene181/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene181/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene182" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 41.5666, -1.04767, -57.6362)
 
-[node name="Sketchfab_Scene183" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene182"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene182/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene182/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene183" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 41.5666, -1.04767, -60.7172)
 
-[node name="Sketchfab_Scene184" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene183"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene183/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene183/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene184" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 31.7862, -1.04767, -54.6852)
 
-[node name="Sketchfab_Scene185" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene184"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene184/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene184/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene185" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3604, -1.04767, -30.8335)
 
-[node name="Sketchfab_Scene186" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene185"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene185/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene185/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene186" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3453, -1.04767, -33.7052)
 
-[node name="Sketchfab_Scene187" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene186"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene186/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene186/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene187" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3035, -1.04767, -41.6579)
 
-[node name="Sketchfab_Scene188" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene187"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene187/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene187/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene188" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3327, -1.04767, -36.105)
 
-[node name="Sketchfab_Scene189" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene188"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene188/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene188/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene189" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 32.3189, -1.04767, -38.7259)
 
-[node name="Sketchfab_Scene190" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene189"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene189/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene189/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene190" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.2882, -1.04767, -44.5669)
 
-[node name="Sketchfab_Scene191" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene190"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene190/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene190/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene191" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.2465, -1.04767, -52.5196)
 
-[node name="Sketchfab_Scene192" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene191"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene191/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene191/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene192" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.2756, -1.04767, -46.9667)
 
-[node name="Sketchfab_Scene193" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene192"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene192/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene192/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene193" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 32.2619, -1.04767, -49.5875)
 
-[node name="Sketchfab_Scene194" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene193"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene193/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene193/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene194" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3289, -1.04767, -23.7908)
 
-[node name="Sketchfab_Scene195" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene194"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene194/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene194/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene195" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3138, -1.04767, -26.6625)
 
-[node name="Sketchfab_Scene196" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene195"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene195/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene195/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene196" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 32.3012, -1.04767, -29.0623)
 
-[node name="Sketchfab_Scene197" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene196"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene196/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene196/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene197" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 37.0131, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene198" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene197"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene197/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene197/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene198" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 34.081, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene199" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene198"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene198/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene198/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene199" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, -0.00397935, 0, 3, 0, 0.00397935, 0, 3, 39.6004, -1.04767, -30.5296)
 
-[node name="Sketchfab_Scene200" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene199"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene199/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene199/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene200" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, -0.00397935, 0, 3, 0, 0.00397935, 0, 3, 42.0002, -1.04767, -30.5264)
 
-[node name="Sketchfab_Scene201" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene200"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene200/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene200/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene201" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00193729, 0, 3, 0, 3, 0, -3, 0, 0.00193729, 44.6001, -1.04767, -30.4768)
 
-[node name="Sketchfab_Scene202" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene201"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene201/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene201/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene202" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 31.8355, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene203" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene202"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene202/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene202/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene203" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 29.3651, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene204" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene203"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene203/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene203/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene204" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 46.7479, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene205" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene204"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene204/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene204/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene205" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 49.1477, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene206" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene205"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene205/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene205/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene206" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 51.7476, -1.04767, -30.4801)
 
-[node name="Sketchfab_Scene207" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene206"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene206/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene206/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene207" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.1064, -1.04767, -21.7655)
 
-[node name="Sketchfab_Scene208" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene207"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene207/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene207/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene208" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.1064, -1.04767, -24.8466)
 
-[node name="Sketchfab_Scene209" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene208"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene208/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene208/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene209" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.5273, -1.04767, -26.6763)
 
-[node name="Sketchfab_Scene210" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene209"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene209/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene209/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene210" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 44.5136, -1.04767, -29.2971)
 
-[node name="Sketchfab_Scene211" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene210"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene210/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene210/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene211" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 46.5642, -1.04767, -16.5272)
 
-[node name="Sketchfab_Scene212" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene211"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene211/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene211/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene212" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.1064, -1.04767, -16.2976)
 
-[node name="Sketchfab_Scene213" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene212"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene212/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene212/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene213" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 44.5273, -1.04767, -18.1273)
 
-[node name="Sketchfab_Scene214" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene213"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene213/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene213/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene214" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 44.5136, -1.04767, -20.7482)
 
-[node name="Sketchfab_Scene215" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene214"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene214/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene214/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene215" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 48.8753, -1.04767, -16.5272)
 
-[node name="Sketchfab_Scene216" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene215"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene215/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene215/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene216" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 51.1866, -1.04767, -16.5272)
 
-[node name="Sketchfab_Scene217" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene216"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene216/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene216/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene217" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 26.6521, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene218" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene217"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene217/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene217/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene218" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99995, 0, -0.0175928, 0, 3, 0, 0.0175928, 0, 2.99995, 22.8974, -1.04767, -30.5263)
 
-[node name="Sketchfab_Scene219" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene218"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene218/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene218/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene219" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 27.6035, -1.04767, -55.4308)
 
-[node name="Sketchfab_Scene220" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene219"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene219/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene219/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene220" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 30.0033, -1.04767, -55.4308)
 
-[node name="Sketchfab_Scene221" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene220"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene220/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene220/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene221" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 32.6032, -1.04767, -55.3846)
 
-[node name="Sketchfab_Scene222" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene221"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene221/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene221/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene222" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.3432, -1.04767, -54.6852)
 
-[node name="Sketchfab_Scene223" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene222"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene222/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene222/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene223" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.4873, -1.04767, -47.0835)
 
-[node name="Sketchfab_Scene224" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene223"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene223/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene223/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene224" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.5165, -1.04767, -41.5305)
 
-[node name="Sketchfab_Scene225" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene224"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene224/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene224/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene225" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 25.5027, -1.04767, -44.1514)
 
-[node name="Sketchfab_Scene226" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene225"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene225/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene225/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene226" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.4721, -1.04767, -49.9924)
 
-[node name="Sketchfab_Scene227" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene226"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene226/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene226/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene227" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.4595, -1.04767, -52.3922)
 
-[node name="Sketchfab_Scene228" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene227"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene227/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene227/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene228" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18.314, -1.04767, -37.0706)
 
-[node name="Sketchfab_Scene229" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene228"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene228/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene228/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene229" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20.7138, -1.04767, -37.0706)
 
-[node name="Sketchfab_Scene230" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene229"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene229/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene229/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene230" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.00204206, 0, 3, 0, 3, 0, -3, 0, -0.00204206, 23.3137, -1.04767, -37.0244)
 
-[node name="Sketchfab_Scene231" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene230"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene230/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene230/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene231" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.8491, -1.04767, -36.4042)
 
-[node name="Sketchfab_Scene232" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene231"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene231/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene231/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene232" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.834, -1.04767, -39.276)
 
-[node name="Sketchfab_Scene233" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene232"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene232/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene232/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene233" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 14.0819, -1.04767, -25.9024)
 
-[node name="Sketchfab_Scene234" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene233"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene233/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene233/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene234" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 19.7789, -1.04767, -24.4794)
 
-[node name="Sketchfab_Scene235" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene234"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene234/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene234/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene235" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6654, -1.04767, -21.9982)
 
-[node name="Sketchfab_Scene236" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene235"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene235/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene235/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene236" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 30.3627, -1.04767, -14.7082)
 
-[node name="Sketchfab_Scene237" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene236"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene236/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene236/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene237" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 17.6808, -1.04767, -19.0661)
 
-[node name="Sketchfab_Scene238" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene237"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene237/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene237/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene238" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6501, -1.04767, -24.9071)
 
-[node name="Sketchfab_Scene239" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene238"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene238/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene238/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene239" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6083, -1.04767, -32.8599)
 
-[node name="Sketchfab_Scene240" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene239"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene239/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene239/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene240" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.6375, -1.04767, -27.3069)
 
-[node name="Sketchfab_Scene241" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene240"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene240/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene240/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene241" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 17.6237, -1.04767, -29.9278)
 
-[node name="Sketchfab_Scene242" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene241"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene241/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene241/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene242" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 17.5947, -1.04767, -35.4471)
 
-[node name="Sketchfab_Scene243" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene242"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene242/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene242/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene243" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.01172, -1.04767, -13.3268)
 
-[node name="Sketchfab_Scene244" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene243"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene243/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene243/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene244" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43265, -1.04767, -15.1566)
 
-[node name="Sketchfab_Scene245" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene244"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene244/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene244/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene245" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.41887, -1.04767, -17.7774)
 
-[node name="Sketchfab_Scene246" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene245"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene245/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene245/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene246" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43265, -1.04767, -20.0727)
 
-[node name="Sketchfab_Scene247" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene246"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene246/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene246/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene247" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.41887, -1.04767, -22.7217)
 
-[node name="Sketchfab_Scene248" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene247"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene247/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene247/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene248" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43265, -1.04767, -25.017)
 
-[node name="Sketchfab_Scene249" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene248"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene248/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene248/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene249" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 10.8841, -1.04767, -25.9024)
 
-[node name="Sketchfab_Scene250" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene249"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene249/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene249/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene250" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99997, 0, 0.0129328, 0, 3, 0, -0.0129328, 0, 2.99997, 23.0888, -1.04766, -24.62)
 
-[node name="Sketchfab_Scene251" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene250"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene250/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene250/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene251" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99997, 0, 0.0129328, 0, 3, 0, -0.0129328, 0, 2.99997, 25.6761, -1.04766, -24.6312)
 
-[node name="Sketchfab_Scene252" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene251"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene251/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene251/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene252" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(2.99997, 0, 0.0129328, 0, 3, 0, -0.0129328, 0, 2.99997, 25.6491, -1.04766, -22.6364)
 
-[node name="Sketchfab_Scene254" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene252"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene252/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene252/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene254" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 25.8726, -1.04767, -19.6407)
 
-[node name="Sketchfab_Scene255" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene254"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene254/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene254/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene255" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.01789, -1.04767, -33.7023)
 
-[node name="Sketchfab_Scene256" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene255"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene255/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene255/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene256" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 8.43882, -1.04767, -35.532)
 
-[node name="Sketchfab_Scene257" parent="." instance=ExtResource("1_fwotj")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene256"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene256/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene256/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="Sketchfab_Scene257" parent="corn_scenes" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -38.1529)
 
-[node name="Sketchfab_Scene258" parent="." instance=ExtResource("1_o8okg")]
+[node name="StaticBody3D" type="StaticBody3D" parent="corn_scenes/Sketchfab_Scene257"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="corn_scenes/Sketchfab_Scene257/StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corn_scenes/Sketchfab_Scene257/StaticBody3D"]
+shape = SubResource("BoxShape3D_1rfcj")
+
+[node name="dirt_scenes" type="Node3D" parent="."]
+
+[node name="Sketchfab_Scene253" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -5.31105)
+
+[node name="Sketchfab_Scene258" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.899, 0, -5.31105)
 
-[node name="Sketchfab_Scene259" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene259" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.5627, 0, -5.31105)
 
-[node name="Sketchfab_Scene260" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene260" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.4398, 0, -5.31105)
 
-[node name="Sketchfab_Scene261" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene261" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53.2543, 0, -5.31105)
 
-[node name="Sketchfab_Scene262" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene262" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 65.0969, 0, -5.31105)
 
-[node name="Sketchfab_Scene263" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene263" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -17.2938)
 
-[node name="Sketchfab_Scene264" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene264" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.6619, 0, -17.2938)
 
-[node name="Sketchfab_Scene265" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene265" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4451, 0, -17.2938)
 
-[node name="Sketchfab_Scene266" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene266" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.17, 0, -17.2938)
 
-[node name="Sketchfab_Scene267" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene267" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.7774, 0, -17.2938)
 
-[node name="Sketchfab_Scene268" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene268" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.9404, 0, -17.2938)
 
-[node name="Sketchfab_Scene269" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene269" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -29.1278)
 
-[node name="Sketchfab_Scene270" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene270" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.7912, 0, -29.1278)
 
-[node name="Sketchfab_Scene271" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene271" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4256, 0, -29.1278)
 
-[node name="Sketchfab_Scene272" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene272" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.1194, 0, -29.1278)
 
-[node name="Sketchfab_Scene273" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene273" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.9988, 0, -29.1278)
 
-[node name="Sketchfab_Scene274" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene274" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.8847, 0, -29.1278)
 
-[node name="Sketchfab_Scene275" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene275" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -40.7703)
 
-[node name="Sketchfab_Scene276" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene276" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.6637, 0, -40.7703)
 
-[node name="Sketchfab_Scene277" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene277" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.2368, 0, -40.7703)
 
-[node name="Sketchfab_Scene278" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene278" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.1802, 0, -40.7703)
 
-[node name="Sketchfab_Scene279" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene279" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.8731, 0, -40.7703)
 
-[node name="Sketchfab_Scene280" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene280" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.318, 0, -40.7703)
 
-[node name="Sketchfab_Scene281" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene281" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -52.6064)
 
-[node name="Sketchfab_Scene282" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene282" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.7311, 0, -52.6064)
 
-[node name="Sketchfab_Scene283" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene283" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4271, 0, -52.6064)
 
-[node name="Sketchfab_Scene284" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene284" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 40.8174, 0, -52.6064)
 
-[node name="Sketchfab_Scene285" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene285" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.6337, 0, -52.6064)
 
-[node name="Sketchfab_Scene286" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene286" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.2589, 0, -52.6064)
 
-[node name="Sketchfab_Scene287" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene287" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -64.5053)
 
-[node name="Sketchfab_Scene288" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene288" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.671, 0, -64.5053)
 
-[node name="Sketchfab_Scene289" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene289" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.4974, 0, -64.5053)
 
-[node name="Sketchfab_Scene290" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene290" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.0746, 0, -64.5053)
 
-[node name="Sketchfab_Scene291" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene291" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53.0196, 0, -64.5053)
 
-[node name="Sketchfab_Scene292" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene292" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.7062, 0, -64.5053)
 
-[node name="Sketchfab_Scene293" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene293" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.90203, 0, -76.2067)
 
-[node name="Sketchfab_Scene294" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene294" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 17.9198, 0, -76.2067)
 
-[node name="Sketchfab_Scene295" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene295" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 29.7106, 0, -76.2067)
 
-[node name="Sketchfab_Scene296" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene296" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.6797, 0, -76.2067)
 
-[node name="Sketchfab_Scene297" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene297" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53.6508, 0, -76.2067)
 
-[node name="Sketchfab_Scene298" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene298" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 65.6248, 0, -76.2067)
 
-[node name="Sketchfab_Scene299" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene299" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 77.134, 0, -76.2067)
 
-[node name="Sketchfab_Scene300" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene300" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.435, 0, -64.215)
 
-[node name="Sketchfab_Scene301" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene301" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -52.3184)
 
-[node name="Sketchfab_Scene302" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene302" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -40.4574)
 
-[node name="Sketchfab_Scene303" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene303" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -28.6435)
 
-[node name="Sketchfab_Scene304" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene304" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -16.7252)
 
-[node name="Sketchfab_Scene305" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene305" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, -4.96593)
 
-[node name="Sketchfab_Scene306" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene306" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.1857, 0, 6.55481)
 
-[node name="Sketchfab_Scene307" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene307" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.3578, 0, 6.55481)
 
-[node name="Sketchfab_Scene308" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene308" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.5599, 0, 6.55481)
 
-[node name="Sketchfab_Scene309" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene309" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 40.6268, 0, 6.55481)
 
-[node name="Sketchfab_Scene310" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene310" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 28.7957, 0, 6.55481)
 
-[node name="Sketchfab_Scene311" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene311" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.9561, 0, 6.55481)
 
-[node name="Sketchfab_Scene312" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene312" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.09375, 0, 6.55481)
 
-[node name="Sketchfab_Scene313" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene313" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.9767, 0, 6.55481)
 
-[node name="Sketchfab_Scene314" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene314" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.01021, 0, -5.36106)
 
-[node name="Sketchfab_Scene315" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene315" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.03942, 0, -17.2111)
 
-[node name="Sketchfab_Scene316" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene316" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.8862, 0, -29.1383)
 
-[node name="Sketchfab_Scene317" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene317" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.87126, 0, -41.0217)
 
-[node name="Sketchfab_Scene318" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene318" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.91329, 0, -52.8339)
 
-[node name="Sketchfab_Scene319" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene319" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.13029, 0, -64.7873)
 
-[node name="Sketchfab_Scene320" parent="." instance=ExtResource("1_o8okg")]
+[node name="Sketchfab_Scene320" parent="dirt_scenes" instance=ExtResource("1_o8okg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.21318, 0, -76.3081)
+
+[node name="player" parent="." instance=ExtResource("3_1w0rl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.594, 0, -6.903)
