@@ -13,6 +13,7 @@ normal_scale = 16.0
 radius = 5.71573
 
 [node name="Candy" type="Area3D"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, -0.026495, -0.0254631, 0.0373611)
 script = ExtResource("1_2ayjj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
