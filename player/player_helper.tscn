@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwwwtgajo3ecu"]
 
-[ext_resource type="PackedScene" uid="uid://cdq4tapbirtom" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
+[ext_resource type="PackedScene" uid="uid://spd7sur75d8x" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
 
 [node name="player_helper" type="Node3D"]
 
