@@ -6,6 +6,8 @@ const SPEED = 15
 @onready var current_camera = $THIRD
 @onready var flashlight_bar = get_parent().get_node("CanvasLayer").get_node("Hud").get_node("flashlight_bar")
 
+var curr_flashlight_value
+
 func _ready():
 	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
 	
@@ -23,6 +25,17 @@ func _process(delta: float) -> void:
 		$LOOK_BACK.current = true
 	else:
 		current_camera.current = true
+		
+	if Input.is_action_just_pressed("flashlight_toggle"):
+		if $flashlight_timer.is_stopped():
+			$player_helper/survivor/SpotLight3D.light_energy = curr_flashlight_value
+			$flashlight_timer.start()
+		else:
+			curr_flashlight_value = $player_helper/survivor/SpotLight3D.light_energy
+			$player_helper/survivor/SpotLight3D.light_energy = 0
+			$flashlight_timer.stop()
+		
+		
 	default_movement(delta)
 	
 func default_movement(delta):
