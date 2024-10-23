@@ -28,4 +28,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1)
 wait_time = 0.1
 autostart = true
 
+[node name="start_flicker_timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="stop_flicker_timer" type="Timer" parent="."]
+
 [connection signal="timeout" from="flashlight_timer" to="." method="_on_flashlight_timer_timeout"]
+[connection signal="timeout" from="start_flicker_timer" to="." method="_on_start_flicker_timer_timeout"]
+[connection signal="timeout" from="stop_flicker_timer" to="." method="_on_stop_flicker_timer_timeout"]
