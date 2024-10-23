@@ -67,3 +67,8 @@ func update_camera():
 	camera.global_transform.origin = camera_position
 	camera.look_at(player_position, Vector3.UP)
 	camera.rotate_object_local(Vector3.RIGHT, deg_to_rad(20))
+
+
+func _on_flashlight_timer_timeout() -> void:
+	if $player_helper/survivor/SpotLight3D.light_energy > 0:
+		$player_helper/survivor/SpotLight3D.light_energy -= 1

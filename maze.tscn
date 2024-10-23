@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=15 format=3 uid="uid://dkewdrsdafkci"]
 
 [ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
@@ -29,6 +29,12 @@ albedo_texture = ExtResource("3_ufobr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bs4pa"]
 size = Vector3(10, 10, 1)
+
+[sub_resource type="Environment" id="Environment_y3mpu"]
+background_mode = 1
+background_color = Color(0.114897, 0.114897, 0.114897, 1)
+background_energy_multiplier = 0.2
+reflected_light_source = 1
 
 [node name="maze" type="Node3D"]
 
@@ -2016,3 +2022,6 @@ transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StartingWall"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.204195, 0, -4.43454)
 shape = SubResource("BoxShape3D_bs4pa")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_y3mpu")

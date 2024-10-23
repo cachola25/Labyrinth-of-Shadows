@@ -23,3 +23,9 @@ current = true
 
 [node name="LOOK_BACK" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1)
+
+[node name="flashlight_timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="flashlight_timer" to="." method="_on_flashlight_timer_timeout"]
