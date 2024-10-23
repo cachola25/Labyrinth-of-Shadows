@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=16 format=3 uid="uid://dkewdrsdafkci"]
 
 [ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
 [ext_resource type="PackedScene" path="res://Scenes/Candy.tscn" id="2_bxqei"]
 [ext_resource type="Texture2D" uid="uid://cod3pdkdc1psl" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
+[ext_resource type="PackedScene" uid="uid://bdkunc41qbb48" path="res://player/HUD.tscn" id="6_dyy3c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
 size = Vector3(100, 1, 100)
@@ -2025,3 +2026,7 @@ shape = SubResource("BoxShape3D_bs4pa")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_y3mpu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="CanvasLayer" instance=ExtResource("6_dyy3c")]

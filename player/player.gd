@@ -4,13 +4,16 @@ class_name Player
 
 const SPEED = 15
 @onready var current_camera = $THIRD
+@onready var flashlight_bar = get_parent().get_node("CanvasLayer").get_node("Hud").get_node("flashlight_bar")
+
 func _ready():
 	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
+	
 	current_camera.current = true
+	flashlight_bar.max_value = $player_helper/survivor/SpotLight3D.light_energy
 	
 
 func _process(delta: float) -> void:
-	print($player_helper/survivor/flashlight.global_transform)
 	if Input.is_action_just_pressed("change_perspective"):
 		if current_camera == $THIRD:
 			current_camera = $FIRST
@@ -71,4 +74,5 @@ func update_camera():
 
 func _on_flashlight_timer_timeout() -> void:
 	if $player_helper/survivor/SpotLight3D.light_energy > 0:
-		$player_helper/survivor/SpotLight3D.light_energy -= 1
+		$player_helper/survivor/SpotLight3D.light_energy -= flashlight_bar.step
+		flashlight_bar.value -= flashlight_bar.step

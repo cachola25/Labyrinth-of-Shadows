@@ -15,6 +15,10 @@ run/main_scene="res://Start_Menu/StartMenu_Scenes/menu_components.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="labyrinth_of_shadows"
