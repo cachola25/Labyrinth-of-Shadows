@@ -2009,14 +2009,56 @@ shape = SubResource("BoxShape3D_ds4ho")
 transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, 1.891, 0, -3.461)
 platform_wall_layers = 65535
 
-[node name="Candy" parent="." instance=ExtResource("2_bxqei")]
-transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 10.2155, 1.30637, -4.19979)
-
 [node name="StartingWall" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StartingWall"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.204195, 0, -4.43454)
 shape = SubResource("BoxShape3D_bs4pa")
 
+[node name="Candy" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 14.4976, 1.30637, -4.19979)
+
+[node name="Candy2" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 4.22263, 1.30637, -47.8076)
+
+[node name="Candy3" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 29.1157, 1.30637, -47.8076)
+
+[node name="Candy4" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 61.4106, 1.30637, -42.9183)
+
+[node name="Candy5" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 105.12, 1.30637, -27.3323)
+
+[node name="Candy6" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 78.2348, 1.30637, -60.2648)
+
+[node name="Candy7" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 92.809, 1.30637, -4.85257)
+
+[node name="Candy8" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 125.027, 1.30637, -36.1989)
+
+[node name="Candy9" parent="." instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 54.2313, 1.30637, -12.9273)
+
 [node name="Battery" parent="." instance=ExtResource("6_h8leq")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.37362, 2.90164, -13.2586)
+transform = Transform3D(0.000396186, 0, 0.0499984, 0, 0.05, 0, -0.0499984, 0, 0.000396186, 3.08015, 1.23744, -60.6995)
+
+[node name="Battery2" parent="." instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 22.7433, 1.23744, -4.7588)
+
+[node name="Battery3" parent="." instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 46.0602, 1.23744, -46.345)
+
+[node name="Battery4" parent="." instance=ExtResource("6_h8leq")]
+transform = Transform3D(-0.0015906, 0, 0.0499747, 0, 0.05, 0, -0.0499747, 0, -0.0015906, 61.5113, 1.23744, -25.7688)
+
+[node name="Battery5" parent="." instance=ExtResource("6_h8leq")]
+transform = Transform3D(-0.00264294, 0, 0.0499301, 0, 0.05, 0, -0.0499301, 0, -0.00264294, 77.0022, 1.23744, -21.6689)
+
+[node name="Battery6" parent="." instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 102.075, 1.23744, -60.9631)
+
+[node name="Battery7" parent="." instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.0270392, 0, -0.0420581, 0, 0.05, 0, 0.0420581, 0, 0.0270392, 125.857, 1.22317, -4.55245)
