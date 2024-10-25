@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=15 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
-[ext_resource type="PackedScene" path="res://Scenes/Candy.tscn" id="2_bxqei"]
-[ext_resource type="Texture2D" uid="uid://cod3pdkdc1psl" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="PackedScene" uid="uid://qiia5yg12lov" path="res://Scenes/Candy.tscn" id="2_bxqei"]
+[ext_resource type="Texture2D" uid="uid://bvs1umk6trk2t" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
+[ext_resource type="PackedScene" uid="uid://cov0jox5qaik0" path="res://Scenes/Battery.tscn" id="6_h8leq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
 size = Vector3(100, 1, 100)
@@ -2009,10 +2010,13 @@ transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, 
 platform_wall_layers = 65535
 
 [node name="Candy" parent="." instance=ExtResource("2_bxqei")]
-transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 10.9911, 1.15872, -6.36763)
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 10.2155, 1.30637, -4.19979)
 
 [node name="StartingWall" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StartingWall"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.204195, 0, -4.43454)
 shape = SubResource("BoxShape3D_bs4pa")
+
+[node name="Battery" parent="." instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.37362, 2.90164, -13.2586)
