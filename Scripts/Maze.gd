@@ -1,16 +1,21 @@
 extends Node3D
-@onready var timer: Timer = $GameTimer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer.start()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
 	pass
-
-
-func _on_GameTimerTimeout() -> void:
-	queue_free()
+	
+func _process(delta: float) -> void:
+	spawn_monster()
+	
+func spawn_monster():
+	var spawn_distance = 5.0
+	var random_offset = Vector3(
+		randf() * 2 - 1,
+		0,
+		randf() * 2 - 1
+	)
+	var player_position = $player.global_transform.origin
+	var player_direction = -$player.global_transform.basis.z
+	var spawn_position = player_position + (player_direction * spawn_distance) + random_offset
+	
 	
 	
