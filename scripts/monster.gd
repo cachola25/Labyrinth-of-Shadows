@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+class_name monster
 const SPEED = 3.0
 
 @onready var player = get_parent().get_node("player")

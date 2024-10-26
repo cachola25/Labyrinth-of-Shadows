@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwwwtgajo3ecu"]
+[gd_scene load_steps=5 format=3 uid="uid://bwwwtgajo3ecu"]
 
+[ext_resource type="Script" path="res://player/player_helper.gd" id="1_arloc"]
 [ext_resource type="PackedScene" uid="uid://bm3ibtngmjmdh" path="res://assets/ri4lwkjmjj7k-Flashlight.obj/flashlight.fbx" id="2_dysc4"]
 [ext_resource type="PackedScene" uid="uid://spd7sur75d8x" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yrh37"]
+height = 16.0045
+radius = 3.97415
+
 [node name="player_helper" type="Node3D"]
+script = ExtResource("1_arloc")
 
 [node name="survivor" parent="." instance=ExtResource("2_u2un6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0452657, 0, 0.0807633)
@@ -16,3 +22,13 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.321
 light_energy = 80.0
 spot_range = 20.0
 spot_angle = 39.5246
+
+[node name="flashlight_area" type="Area3D" parent="survivor"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="survivor/flashlight_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.3, 1.1, 9.3)
+shape = SubResource("CylinderShape3D_yrh37")
+
+[connection signal="body_entered" from="survivor/flashlight_area" to="." method="_on_area_3d_body_entered"]
