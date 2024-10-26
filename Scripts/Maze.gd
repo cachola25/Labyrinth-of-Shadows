@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 	pass
 		
 func spawn_monster():
-	var spawn_distance = 5.0 
+	var spawn_distance = 10.0 
 	var random_offset_range = 2.0
 	var random_offset = Vector3(
 		(randf() * 2 - 1) * random_offset_range, 
@@ -30,8 +30,6 @@ func spawn_monster():
 	
 	monster_in_scene = true
 	
-
-
 func _on_monster_spawn_timer_timeout() -> void:
 	if not monster_in_scene:
 		spawn_monster()

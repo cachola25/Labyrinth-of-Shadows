@@ -32,3 +32,4 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.305
 shape = SubResource("CylinderShape3D_yrh37")
 
 [connection signal="body_entered" from="survivor/flashlight_area" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="survivor/flashlight_area" to="." method="_on_flashlight_area_body_exited"]

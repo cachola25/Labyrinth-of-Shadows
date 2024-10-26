@@ -2,20 +2,24 @@ extends Node3D
 
 @onready var maze_scene = get_tree().root.get_child(0)
 @onready var player_scene = get_parent()
+@onready var monster_in_view = false
+@onready var monster_scene
 
 func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if monster_in_view:
+		check_line_of_sight()
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is monster and $survivor/SpotLight3D.light_energy > 0:
-		check_line_of_sight(body)
+		monster_scene = body
+		monster_in_view = true
 		
-func check_line_of_sight(monster_scene):
+func check_line_of_sight():
 	var from = player_scene.current_camera.global_transform.origin 
 	var to = monster_scene.global_transform.origin
 	var space_state = get_world_3d().direct_space_state
@@ -46,3 +50,8 @@ func despawn_monster(monster_scene):
 	monster_scene.queue_free()
 	maze_scene.monster_in_scene = false
 	maze_scene.get_node("monster_spawn_timer").start()
+
+
+func _on_flashlight_area_body_exited(body: Node3D) -> void:
+	if body is monster or $survivor/SpotLight3D.light_energy > 0:
+		monster_in_view = false
