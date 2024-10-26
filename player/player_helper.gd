@@ -45,3 +45,4 @@ func check_line_of_sight(monster_scene):
 func despawn_monster(monster_scene):
 	monster_scene.queue_free()
 	maze_scene.monster_in_scene = false
+	maze_scene.get_node("monster_spawn_timer").start()

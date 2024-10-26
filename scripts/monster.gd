@@ -9,8 +9,6 @@ const SPEED = 3.0
 func _ready() -> void:
 	pass
 	
-	
-	
 func _physics_process(delta):
 	$NavigationAgent3D.set_target_position(player.global_transform.origin)
 

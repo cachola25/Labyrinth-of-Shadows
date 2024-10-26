@@ -7,8 +7,7 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	if not monster_in_scene:
-		spawn_monster()
+	pass
 		
 func spawn_monster():
 	var spawn_distance = 5.0 
@@ -31,3 +30,9 @@ func spawn_monster():
 	
 	monster_in_scene = true
 	
+
+
+func _on_monster_spawn_timer_timeout() -> void:
+	if not monster_in_scene:
+		spawn_monster()
+		$monster_spawn_timer.wait_time = randi_range(1, 10)
