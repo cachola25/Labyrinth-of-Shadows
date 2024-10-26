@@ -1,10 +1,10 @@
 extends Node3D
 
 @onready var maze_scene = get_tree().root.get_child(0)
-# Called when the node enters the scene tree for the first time.
+@onready var player_scene = get_parent()
+
 func _ready() -> void:
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -12,7 +12,36 @@ func _process(delta: float) -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	print(body)
 	if body is monster and $survivor/SpotLight3D.light_energy > 0:
-		body.queue_free()
-		maze_scene.monster_in_scene = false
+		check_line_of_sight(body)
+		
+func check_line_of_sight(monster_scene):
+	var from = player_scene.current_camera.global_transform.origin 
+	var to = monster_scene.global_transform.origin
+	var space_state = get_world_3d().direct_space_state
+
+	# Create a new PhysicsRayQueryParameters3D object
+	var query = PhysicsRayQueryParameters3D.new()
+	query.from = from
+	query.to = to
+	query.exclude = [self, player_scene.current_camera]
+	query.collision_mask = (1 << 2) | (1 << 3)
+
+	# Perform the raycast
+	var result = space_state.intersect_ray(query)
+
+	if result:
+		var collider = result.collider
+		if collider == monster:
+			# Line of sight is clear; no obstacles between player and monster
+			despawn_monster(monster_scene)
+		else:
+			# There is an obstacle between player and monster
+			pass
+	else:
+		# No collision detected; line of sight is clear
+		despawn_monster(monster_scene)
+
+func despawn_monster(monster_scene):
+	monster_scene.queue_free()
+	maze_scene.monster_in_scene = false
