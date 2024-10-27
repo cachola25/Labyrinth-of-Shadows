@@ -1,27 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://b5tx6ccymbokb"]
 
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="1_h0xsf"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_i6b30"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jacht"]
+[ext_resource type="PackedScene" uid="uid://c3xp3uts7gtys" path="res://scenes/Monster.tscn" id="2_bd2kb"]
+[ext_resource type="PackedScene" uid="uid://bdkunc41qbb48" path="res://player/HUD.tscn" id="2_wyl5s"]
 
 [node name="testing_floor" type="Node3D"]
 
 [node name="player" parent="." instance=ExtResource("1_h0xsf")]
 
+[node name="Monster" parent="." instance=ExtResource("2_bd2kb")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -8.076, 0, 6.497)
+
 [node name="walls" type="Node3D" parent="."]
 
-[node name="floor" type="StaticBody3D" parent="walls"]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0.944, -50, -6.325)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="walls/floor"]
-mesh = SubResource("BoxMesh_i6b30")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="walls/floor"]
-shape = SubResource("BoxShape3D_jacht")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62213, 35.569, 21.6477)
-light_energy = 16.0
-omni_range = 308.312
+[node name="Hud" parent="CanvasLayer" instance=ExtResource("2_wyl5s")]

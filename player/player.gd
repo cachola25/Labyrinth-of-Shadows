@@ -4,13 +4,20 @@ class_name Player
 
 const SPEED = 15
 @onready var current_camera = $THIRD
+@onready var flashlight_bar = get_parent().get_node("CanvasLayer").get_node("Hud").get_node("flashlight_bar")
+@onready var flashlight_light = $player_helper/survivor/SpotLight3D
+@onready var flickering_threshold = flashlight_bar.max_value * 0.5
+
+var is_flickering = false
+
 func _ready():
+	randomize()
 	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
 	current_camera.current = true
+	flashlight_bar.max_value = flashlight_light.light_energy
 	
 
 func _process(delta: float) -> void:
-	print($player_helper/survivor/flashlight.global_transform)
 	if Input.is_action_just_pressed("change_perspective"):
 		if current_camera == $THIRD:
 			current_camera = $FIRST
@@ -20,6 +27,19 @@ func _process(delta: float) -> void:
 		$LOOK_BACK.current = true
 	else:
 		current_camera.current = true
+		
+	if Input.is_action_just_pressed("flashlight_toggle"):
+		if $flashlight_timer.is_stopped():
+			flashlight_light.light_energy = flashlight_bar.value
+			$flashlight_timer.start()
+			if flashlight_bar.value <= flickering_threshold:
+				start_flickering()
+		else:
+			flashlight_light.light_energy = 0
+			$flashlight_timer.stop()
+			stop_flickering()
+		
+		
 	default_movement(delta)
 	
 func default_movement(delta):
@@ -67,3 +87,40 @@ func update_camera():
 	camera.global_transform.origin = camera_position
 	camera.look_at(player_position, Vector3.UP)
 	camera.rotate_object_local(Vector3.RIGHT, deg_to_rad(20))
+		
+func _on_flashlight_timer_timeout() -> void:
+	if flashlight_light.light_energy > 0:
+		flashlight_light.light_energy -= flashlight_bar.step
+		flashlight_bar.value -= flashlight_bar.step
+		if flashlight_bar.value <= flickering_threshold \
+		and not is_flickering \
+		and flashlight_light.light_energy > 0:
+			start_flickering()
+	else:
+		flashlight_light.light_energy = 0
+		flashlight_bar.value = 0
+		stop_flickering()
+		$flashlight_timer.stop()
+
+func start_flickering():
+	if not is_flickering:
+		is_flickering = true
+		$start_flicker_timer.start()
+
+func stop_flickering():
+	if is_flickering:
+		is_flickering = false
+		$start_flicker_timer.stop()
+		flashlight_light.light_energy = 0
+
+func _on_start_flicker_timer_timeout() -> void:
+	if flashlight_light.light_energy > 0:
+		var base_energy = flashlight_bar.value
+		var flicker_chance = randf()
+		if flicker_chance > 0.5:
+			flashlight_light.light_energy = base_energy * (0.8 + randf() * 0.4)
+		else:
+			flashlight_light.light_energy = base_energy * (0.2 + randf() * 0.2)
+		flashlight_light.light_energy = max(flashlight_light.light_energy, 0)
+	else:
+		stop_flickering()
