@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://14m4pwxvrlfe"]
+[gd_scene load_steps=4 format=3 uid="uid://14m4pwxvrlfe"]
 
 [ext_resource type="FontFile" uid="uid://bbn1qdl4m3ji0" path="res://assets/Fonts/Avallon Alt.ttf" id="1_omedg"]
+[ext_resource type="Script" path="res://End_Scene/End_Screen_Scenes/end_screen.gd" id="1_sp363"]
 
 [sub_resource type="Environment" id="Environment_megbh"]
 background_mode = 1
 
 [node name="End_Screen" type="Node3D"]
+script = ExtResource("1_sp363")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -74,3 +76,5 @@ icon_alignment = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_megbh")
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]

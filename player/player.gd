@@ -10,6 +10,7 @@ const SPEED = 15
 
 var is_flickering = false
 
+signal gameover
 func _ready():
 	randomize()
 	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
@@ -124,3 +125,8 @@ func _on_start_flicker_timer_timeout() -> void:
 		flashlight_light.light_energy = max(flashlight_light.light_energy, 0)
 	else:
 		stop_flickering()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.has_method("update_target_location"):
+		gameover.emit()

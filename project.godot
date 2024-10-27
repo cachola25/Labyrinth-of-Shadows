@@ -24,10 +24,6 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="labyrinth_of_shadows"
 
-[filesystem]
-
-import/blender/enabled=false
-
 [input]
 
 move_forward={
