@@ -8,6 +8,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5lrcv"]
 
 [node name="player" type="CharacterBody3D"]
+collision_layer = 32769
+collision_mask = 32769
 script = ExtResource("1_67jn6")
 
 [node name="player_helper" parent="." instance=ExtResource("1_8aobv")]
@@ -26,6 +28,15 @@ current = true
 [node name="LOOK_BACK" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1)
 
+[node name="flashlight_timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="start_flicker_timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="stop_flicker_timer" type="Timer" parent="."]
+
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 3
 
@@ -33,4 +44,7 @@ collision_mask = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.811401, 0)
 shape = SubResource("CapsuleShape3D_5lrcv")
 
+[connection signal="timeout" from="flashlight_timer" to="." method="_on_flashlight_timer_timeout"]
+[connection signal="timeout" from="start_flicker_timer" to="." method="_on_start_flicker_timer_timeout"]
+[connection signal="timeout" from="stop_flicker_timer" to="." method="_on_stop_flicker_timer_timeout"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
