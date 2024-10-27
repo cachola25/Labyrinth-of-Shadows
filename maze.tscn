@@ -2025,14 +2025,64 @@ shape = SubResource("BoxShape3D_ds4ho")
 transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, 1.891, 0, -3.461)
 platform_wall_layers = 65535
 
-[node name="Candy" parent="." instance=ExtResource("2_bxqei")]
-transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 10.9911, 1.15872, -6.36763)
-
 [node name="StartingWall" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StartingWall"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.204195, 0, -4.43454)
 shape = SubResource("BoxShape3D_bs4pa")
+
+[node name="Cookies" type="Node3D" parent="."]
+
+[node name="Candy" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 14.4976, 1.30637, -4.19979)
+
+[node name="Candy2" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 4.22263, 1.30637, -47.8076)
+
+[node name="Candy3" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 29.1157, 1.30637, -47.8076)
+
+[node name="Candy4" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 61.4106, 1.30637, -42.9183)
+
+[node name="Candy5" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 105.12, 1.30637, -27.3323)
+
+[node name="Candy6" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 78.2348, 1.30637, -60.2648)
+
+[node name="Candy7" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 92.809, 1.30637, -4.85257)
+
+[node name="Candy8" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 125.027, 1.30637, -36.1989)
+
+[node name="Candy9" parent="Cookies" instance=ExtResource("2_bxqei")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 54.2313, 1.30637, -12.9273)
+
+[node name="Batteries" type="Node3D" parent="."]
+transform = Transform3D(0.000396186, 0, 0.0499984, 0, 0.05, 0, -0.0499984, 0, 0.000396186, 3.08015, 1.23744, -60.6995)
+
+[node name="Battery" parent="Batteries" instance=ExtResource("6_h8leq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Battery2" parent="Batteries" instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.00792372, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.00792372, -1115.66, 0, 402.116)
+
+[node name="Battery3" parent="Batteries" instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.00792372, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.00792372, -280.27, 0, 861.848)
+
+[node name="Battery4" parent="Batteries" instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.99921, 0, 0.0397307, 0, 1, 0, -0.0397307, 0, 0.99921, -689.333, 0, 1174.12)
+
+[node name="Battery5" parent="Batteries" instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.998152, 0, 0.0607698, 0, 1, 0, -0.0607698, 0, 0.998152, -768.872, 0, 1484.58)
+
+[node name="Battery6" parent="Batteries" instance=ExtResource("6_h8leq")]
+transform = Transform3D(0.00792372, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.00792372, 20.9594, 0, 1979.78)
+
+[node name="Battery7" parent="Batteries" instance=ExtResource("6_h8leq")]
+transform = Transform3D(-0.83685, 0, -0.547432, 0, 1, 0, 0.547432, 0, -0.83685, -1103.45, -0.285339, 2464.36)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_y3mpu")

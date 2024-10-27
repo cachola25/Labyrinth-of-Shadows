@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://cov0jox5qaik0"]
+
+[ext_resource type="Script" path="res://Scripts/Battery.gd" id="1_3c3il"]
+[ext_resource type="ArrayMesh" uid="uid://bbeb2aqg44vxo" path="res://assets/tinker.obj" id="1_78qtd"]
+[ext_resource type="Texture2D" uid="uid://d3kmab06vyp7y" path="res://assets/Battery.png" id="2_t1bpo"]
+[ext_resource type="AudioStream" uid="uid://bxsorsovk3dy0" path="res://Audio/BeepNoise.mp3" id="3_ju0fu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0bhh"]
+albedo_texture = ExtResource("2_t1bpo")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ndktd"]
+height = 40.0889
+radius = 7.01713
+
+[node name="Battery" type="Area3D"]
+script = ExtResource("1_3c3il")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_v0bhh")
+mesh = ExtResource("1_78qtd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.2532, -5.05378, 13.5253)
+shape = SubResource("CylinderShape3D_ndktd")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7055, -3.49002, 14.9101)
+light_color = Color(0, 1, 0.0235294, 1)
+omni_range = 5.00088
+
+[node name="BeepNoise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ju0fu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
