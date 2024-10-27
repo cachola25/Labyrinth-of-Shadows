@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://spd7sur75d8x" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_yrh37"]
-height = 15.2838
+height = 21.041
 radius = 10.8101
 
 [node name="player_helper" type="Node3D"]
@@ -24,11 +24,11 @@ spot_range = 20.0
 spot_angle = 39.5246
 
 [node name="flashlight_area" type="Area3D" parent="survivor"]
-collision_layer = 6
-collision_mask = 6
+collision_layer = 7
+collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="survivor/flashlight_area"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.305189, 1.11441, 6.00745)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.305, 1.114, 10)
 shape = SubResource("CylinderShape3D_yrh37")
 
 [connection signal="body_entered" from="survivor/flashlight_area" to="." method="_on_area_3d_body_entered"]

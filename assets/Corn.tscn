@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://hph25bwtvmuw" path="res://assets/corn_corn_corn.glb" id="1_y2tjf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xeitk"]
-size = Vector3(1.15259, 2.95593, 1)
+size = Vector3(0.952394, 2.59598, 0.95459)
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_y2tjf")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
@@ -13,5 +13,5 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="corn_body" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0533447, 0.977966, 0)
+transform = Transform3D(1.07786, 0, 0, 0, 1.07786, 0, 0, 0, 1.07786, -0.0545471, 1.23462, 0.0244729)
 shape = SubResource("BoxShape3D_xeitk")

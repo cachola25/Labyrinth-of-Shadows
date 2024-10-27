@@ -13,8 +13,8 @@ func _process(delta: float) -> void:
 	pass
 		
 func spawn_monster():
-	var spawn_distance = 10.0 
-	var random_offset_range = 5.0
+	var spawn_distance = 12.0 
+	var random_offset_range = 1.0
 	var random_offset = Vector3(
 		(randf() * 2 - 1) * random_offset_range, 
 		0,
