@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=19 format=3 uid="uid://dkewdrsdafkci"]
 
 [ext_resource type="PackedScene" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bvs1umk6trk2t" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
 [ext_resource type="PackedScene" uid="uid://cov0jox5qaik0" path="res://Scenes/Battery.tscn" id="6_h8leq"]
+[ext_resource type="Script" path="res://Scenes/UI_countdown.gd" id="7_cja25"]
+[ext_resource type="Texture2D" uid="uid://d4bvjmkemamsi" path="res://assets/ScaryTimer.jpg" id="7_wd5lm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
 size = Vector3(100, 1, 100)
@@ -30,6 +32,12 @@ albedo_texture = ExtResource("3_ufobr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bs4pa"]
 size = Vector3(10, 10, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_43whj"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_sm3xs"]
+font_size = 28
 
 [node name="maze" type="Node3D"]
 
@@ -2067,3 +2075,33 @@ transform = Transform3D(0.00792372, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.007923
 
 [node name="Battery7" parent="Batteries" instance=ExtResource("6_h8leq")]
 transform = Transform3D(-0.83685, 0, -0.547432, 0, 1, 0, 0.547432, 0, -0.83685, -1103.45, -0.285339, 2464.36)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("7_cja25")
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+position = Vector2(81.5, 28)
+scale = Vector2(0.25117, 0.15)
+texture = ExtResource("7_wd5lm")
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 9.0
+offset_right = 125.0
+offset_bottom = 44.0
+text = "0"
+label_settings = SubResource("LabelSettings_43whj")
+
+[node name="TimerLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 90.0
+offset_bottom = 48.0
+text = "Time:"
+label_settings = SubResource("LabelSettings_sm3xs")
