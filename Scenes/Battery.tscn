@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://wbhs7jbdjw1m"]
+[gd_scene load_steps=7 format=3 uid="uid://eprwcilsgq5t"]
 
 [ext_resource type="Script" path="res://Scripts/Battery.gd" id="1_3c3il"]
 [ext_resource type="ArrayMesh" uid="uid://cbkiic7qrpysk" path="res://assets/tinker.obj" id="1_78qtd"]

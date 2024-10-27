@@ -8,6 +8,10 @@ var monster_in_scene = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.start()
+	for cookie in $Cookies.get_children():
+		cookie.connect("play_chomp", _on_play_chomp)
+	for battery in $Batteries.get_children():
+		battery.connect("play_beep", _on_play_beep)
 	
 func _process(delta: float) -> void:
 	pass
@@ -40,3 +44,9 @@ func _on_monster_spawn_timer_timeout() -> void:
 		
 func _on_player_gameover() -> void:
 	get_tree().change_scene_to_file("res://End_Scene/End_Screen_Scenes/end_screen.tscn")
+	
+func _on_play_chomp():
+	$ChompSound.play()
+	
+func _on_play_beep():
+	$BeepNoise.play()
