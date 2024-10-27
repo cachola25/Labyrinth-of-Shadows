@@ -6,7 +6,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_yrh37"]
 height = 15.2838
-radius = 6.8926
+radius = 10.8101
 
 [node name="player_helper" type="Node3D"]
 script = ExtResource("1_arloc")

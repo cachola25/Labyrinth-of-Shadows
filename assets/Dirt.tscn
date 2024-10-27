@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnkogqny2cdn"]
+[gd_scene load_steps=3 format=3 uid="uid://dnkogqny2cdn"]
 
 [ext_resource type="PackedScene" uid="uid://fl5m2hw0e84f" path="res://dirt_ground_texture.glb" id="1_ya32a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rsi0i"]
+size = Vector3(1, 0.00440625, 1)
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_ya32a")]
 
 [node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_2" index="0"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+transform = Transform3D(1.31756, 0, 0, 0, 1.31756, 0, 0, 0, 1.31756, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(4.5545, 0, 0, 0, 4.5545, 0, 0, 0, 4.5545, 0, -0.30798, 0)
+shape = SubResource("BoxShape3D_rsi0i")

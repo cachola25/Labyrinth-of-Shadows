@@ -10,10 +10,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if monster_in_view:
-		check_line_of_sight()
+	#if monster_in_view:
+	check_line_of_sight()
 
-
+	
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is monster and $survivor/SpotLight3D.light_energy > 0:
 		monster_scene = body
@@ -21,7 +21,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		
 func check_line_of_sight():
 	var from = player_scene.current_camera.global_transform.origin 
-	var to = monster_scene.global_transform.origin
+	var to = from * player_scene.current_camera.global_transform.basis.z.normalized() * $survivor/SpotLight3D.spot_range
 	var space_state = get_world_3d().direct_space_state
 
 	# Create a new PhysicsRayQueryParameters3D object
@@ -33,18 +33,18 @@ func check_line_of_sight():
 
 	# Perform the raycast
 	var result = space_state.intersect_ray(query)
-
+	
 	if result:
 		var collider = result.collider
-		if collider == monster:
+		print(collider)
+		if collider == monster_scene:
 			# Line of sight is clear; no obstacles between player and monster
+			print("Line of sight is clear; no obstacles between player and monster")
 			despawn_monster(monster_scene)
 		else:
 			# There is an obstacle between player and monster
+			print("There is an obstacle between player and monster")
 			pass
-	else:
-		# No collision detected; line of sight is clear
-		despawn_monster(monster_scene)
 
 func despawn_monster(monster_scene):
 	monster_scene.queue_free()
