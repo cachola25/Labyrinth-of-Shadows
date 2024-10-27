@@ -6,16 +6,15 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#Rotates Cookie
-	rotate_y(0.01)
+	pass
 	
 
 
 func _on_body_entered(body):
-	#Plays chomping sound when player runs over coin
-	$ChompSound.play()
-	#Delete cookie when picked up
+	#Play beep noise when battery is picked up
+	$BeepNoise.play()
+	#Delete battery when it is picked up
 	queue_free()
+	
