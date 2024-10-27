@@ -4,6 +4,7 @@ class_name Player
 
 const SPEED = 15
 @onready var current_camera = $THIRD
+signal gameover
 func _ready():
 	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
 	current_camera.current = true
@@ -67,3 +68,8 @@ func update_camera():
 	camera.global_transform.origin = camera_position
 	camera.look_at(player_position, Vector3.UP)
 	camera.rotate_object_local(Vector3.RIGHT, deg_to_rad(20))
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.has_method("update_target_location"):
+		gameover.emit()

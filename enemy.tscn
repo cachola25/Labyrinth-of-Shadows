@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2di126qprwxo"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_ym45c"]
+[ext_resource type="PackedScene" uid="uid://c7lp0juhsrkt7" path="res://Models/alien.blend" id="2_83w0j"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5qybe"]
+radius = 0.231587
+height = 2.98678
+
+[node name="Enemy" type="CharacterBody3D" groups=["enemies"]]
+collision_layer = 2
+script = ExtResource("1_ym45c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.566632, 1.677, -0.174854)
+shape = SubResource("CapsuleShape3D_5qybe")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="alien" parent="." instance=ExtResource("2_83w0j")]

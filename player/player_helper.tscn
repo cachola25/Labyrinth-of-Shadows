@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwwwtgajo3ecu"]
 
-[ext_resource type="PackedScene" uid="uid://bm3ibtngmjmdh" path="res://assets/ri4lwkjmjj7k-Flashlight.obj/flashlight.fbx" id="2_dysc4"]
-[ext_resource type="PackedScene" uid="uid://spd7sur75d8x" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
+[ext_resource type="PackedScene" uid="uid://fpegoppwbw03" path="res://assets/ri4lwkjmjj7k-Flashlight.obj/flashlight.fbx" id="2_dysc4"]
+[ext_resource type="PackedScene" uid="uid://ccrnk7k2becjf" path="res://assets/Final Exam - PSX Survival Horror Asset Pack/survivor.fbx" id="2_u2un6"]
 
 [node name="player_helper" type="Node3D"]
 
