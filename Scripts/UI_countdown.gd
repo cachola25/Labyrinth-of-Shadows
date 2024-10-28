@@ -1,24 +1,21 @@
 extends Control
 
-@onready var timer: Timer = $Countdown
+@onready var Gametimer: Timer = $Countdown
 @onready var time: Label = $Minutes
-@onready var seconds: Label = $Seconds
+
+#var collected = candy.collected
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer.start()
+	Gametimer.start()
 
 func time_left_to_live():
-	var timeLeft = timer.time_left
+	var timeLeft = Gametimer.time_left
 	
 	#Update times
 	var minutes = floor(timeLeft / 60)
 	var seconds = int(timeLeft) % 60
 
-	#Cookie updating
-	#if Candy.collected == true:
-		#seconds + 30
-		#Candy.collected = false
 	return [minutes, seconds]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

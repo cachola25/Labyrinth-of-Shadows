@@ -15,6 +15,12 @@ run/main_scene="res://Start_Menu/StartMenu_Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://maze.tscn"
+"<<<<<<<HEAD[autoload]Candy"="*res://Scripts/Candy.gd"
+
+[autoload]
+
+Candy="*res://Scripts/Candy.gd"
+UICountdown="*res://Scripts/UI_countdown.gd"
 
 [display]
 
@@ -24,6 +30,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="labyrinth_of_shadows"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

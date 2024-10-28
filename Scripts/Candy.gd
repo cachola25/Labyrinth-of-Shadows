@@ -1,7 +1,7 @@
 extends Area3D
 
 signal play_chomp
-var collected: bool = false
+var collected = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -15,7 +15,10 @@ func _on_body_entered(body):
 	#Plays chomping sound when player runs over coin
 	emit_signal("play_chomp")
 	#Delete cookie when picked up
+	
 	$ChompSound.play()
-	collected = true
+	var time = body.get_parent().get_node("UICountdown").seconds
+	time += 30
+	
 	queue_free()
  
