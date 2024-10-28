@@ -61,8 +61,6 @@ func default_movement(delta):
 		if not is_moving_backwards:
 			rotation.y = new_angle
 			$player_helper/survivor.rotation.y = 0
-		else:
-			$player_helper/survivor.rotation.y = PI
 		$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Jog")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
