@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://l3r10avv44hi"]
+
+[ext_resource type="PackedScene" uid="uid://cy3x0c8yjiuo" path="res://Start_Menu/StartMenu_Scenes/menu_components.tscn" id="1_ep4pi"]
+[ext_resource type="PackedScene" uid="uid://c80olc41m7av4" path="res://Start_Menu/StartMenu_Scenes/flashing_lights.tscn" id="2_bqpe5"]
+
+[node name="End_menu_components" type="Node3D"]
+
+[node name="3D_Menu_Scene" parent="." instance=ExtResource("1_ep4pi")]
+
+[node name="GridMap" type="GridMap" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.532309, -0.279363, -0.799127, -0.0412917, 0.951425, -0.305099, 0.845543, -0.12941, -0.517987, 13.3217, 3.67529, -4.2558)
+
+[node name="Flashing_Lights" parent="." instance=ExtResource("2_bqpe5")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14.0048, 5.752, -2.69338)
+
+[node name="Flashing_Lights3" parent="." instance=ExtResource("2_bqpe5")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.0665, 7.74376, -1.30758)
+
+[node name="Flashing_Lights2" parent="." instance=ExtResource("2_bqpe5")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 25.5549, 1.56937, -9.25704)

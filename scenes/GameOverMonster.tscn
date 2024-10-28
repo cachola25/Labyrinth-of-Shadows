@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bomwgdv5ovu02"]
 
-[ext_resource type="PackedScene" uid="uid://mvujr0bhd6km" path="res://monster.blend" id="1_fmquj"]
+[ext_resource type="PackedScene" path="res://scenes/Monster.tscn" id="1_fmquj"]
 
 [node name="Node3D" type="Node3D"]
 

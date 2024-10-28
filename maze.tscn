@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" uid="uid://dd3ao1k67tl4c" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
 [ext_resource type="PackedScene" path="res://Scenes/Candy.tscn" id="2_bxqei"]
-[ext_resource type="Texture2D" uid="uid://cod3pdkdc1psl" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="Texture2D" uid="uid://cciy1kmc4in37" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
