@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-class_name monster
+class_name my_monster
 const SPEED = 3.0
 const SPEEDUP_THRESHOLD = 30
 @onready var maze_scene = get_tree().root.get_child(0)

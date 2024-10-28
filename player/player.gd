@@ -132,5 +132,5 @@ func _on_start_flicker_timer_timeout() -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is monster:
+	if body is my_monster:
 		gameover.emit()
