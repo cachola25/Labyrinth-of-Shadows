@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1xmr82umn25p"
 path.s3tc="res://.godot/imported/Clown_diffuse.png-dfbca7fd557c431781a3fdc55f6e0723.s3tc.ctex"
+path.etc2="res://.godot/imported/Clown_diffuse.png-dfbca7fd557c431781a3fdc55f6e0723.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Clown/the_clown/textures/Clown_diffuse.png"
-dest_files=["res://.godot/imported/Clown_diffuse.png-dfbca7fd557c431781a3fdc55f6e0723.s3tc.ctex"]
+dest_files=["res://.godot/imported/Clown_diffuse.png-dfbca7fd557c431781a3fdc55f6e0723.s3tc.ctex", "res://.godot/imported/Clown_diffuse.png-dfbca7fd557c431781a3fdc55f6e0723.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://qbhlct4jtx4u"
 path.s3tc="res://.godot/imported/Scarecrow_baseColor.png-04cbb4fdd2b1ef684b14f8458ea1507c.s3tc.ctex"
+path.etc2="res://.godot/imported/Scarecrow_baseColor.png-04cbb4fdd2b1ef684b14f8458ea1507c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/scarecrow/scarecrow/textures/Scarecrow_baseColor.png"
-dest_files=["res://.godot/imported/Scarecrow_baseColor.png-04cbb4fdd2b1ef684b14f8458ea1507c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Scarecrow_baseColor.png-04cbb4fdd2b1ef684b14f8458ea1507c.s3tc.ctex", "res://.godot/imported/Scarecrow_baseColor.png-04cbb4fdd2b1ef684b14f8458ea1507c.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c556nl548af1s"
 path.s3tc="res://.godot/imported/Clown_occlusion.png-10d755d7c0900aa0f24c47b7fd435a3b.s3tc.ctex"
+path.etc2="res://.godot/imported/Clown_occlusion.png-10d755d7c0900aa0f24c47b7fd435a3b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Clown/the_clown/textures/Clown_occlusion.png"
-dest_files=["res://.godot/imported/Clown_occlusion.png-10d755d7c0900aa0f24c47b7fd435a3b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Clown_occlusion.png-10d755d7c0900aa0f24c47b7fd435a3b.s3tc.ctex", "res://.godot/imported/Clown_occlusion.png-10d755d7c0900aa0f24c47b7fd435a3b.etc2.ctex"]
 
 [params]
 
