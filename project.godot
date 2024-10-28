@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://maze.tscn"
 
+[autoload]
+
+Candy="*res://Scripts/Candy.gd"
+
 [dotnet]
 
 project/assembly_name="labyrinth_of_shadows"

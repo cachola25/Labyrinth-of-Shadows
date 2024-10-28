@@ -1,6 +1,6 @@
 extends Area3D
 
-
+var collected: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -17,5 +17,6 @@ func _process(delta):
 func _on_body_entered(body):
 	#Plays chomping sound when player runs over coin
 	$ChompSound.play()
-	#Delete cookie when picked up
+	collected = true
 	queue_free()
+ 
