@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=22 format=3 uid="uid://dkewdrsdafkci"]
 
 [ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" uid="uid://dnkogqny2cdn" path="res://assets/Dirt.tscn" id="1_o8okg"]
@@ -39,18 +39,11 @@ albedo_texture = ExtResource("3_ufobr")
 [sub_resource type="BoxShape3D" id="BoxShape3D_bs4pa"]
 size = Vector3(10, 10, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_jo8hb"]
-font_size = 28
-
-[sub_resource type="LabelSettings" id="LabelSettings_sufl1"]
-font_size = 28
-
-[sub_resource type="LabelSettings" id="LabelSettings_xgjrs"]
-line_spacing = 1.0
-font_size = 28
-
-[sub_resource type="LabelSettings" id="LabelSettings_ept12"]
-font_size = 28
+[sub_resource type="Environment" id="Environment_y3mpu"]
+background_mode = 1
+background_color = Color(0.136826, 0.136826, 0.136826, 1)
+background_energy_multiplier = 0.3
+reflected_light_source = 1
 
 [node name="maze" type="Node3D"]
 script = ExtResource("1_oc1wt")
@@ -2076,6 +2069,9 @@ transform = Transform3D(0.00792372, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.007923
 [node name="Battery7" parent="Batteries" instance=ExtResource("6_h8leq")]
 transform = Transform3D(-0.83685, 0, -0.547432, 0, 1, 0, 0.547432, 0, -0.83685, -1103.45, -0.285339, 2464.36)
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_y3mpu")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Hud" parent="CanvasLayer" instance=ExtResource("6_dyy3c")]
@@ -2116,7 +2112,6 @@ offset_top = 9.0
 offset_right = 125.0
 offset_bottom = 44.0
 text = "00:"
-label_settings = SubResource("LabelSettings_jo8hb")
 horizontal_alignment = 2
 
 [node name="Seconds" type="Label" parent="UI"]
@@ -2126,7 +2121,6 @@ offset_top = 9.0
 offset_right = 166.0
 offset_bottom = 44.0
 text = "00:"
-label_settings = SubResource("LabelSettings_sufl1")
 horizontal_alignment = 2
 
 [node name="Msecs" type="Label" parent="UI"]
@@ -2136,7 +2130,6 @@ offset_top = 9.0
 offset_right = 205.0
 offset_bottom = 44.0
 text = "00:"
-label_settings = SubResource("LabelSettings_xgjrs")
 horizontal_alignment = 2
 
 [node name="Time" type="Label" parent="UI"]
@@ -2146,7 +2139,3 @@ offset_top = 7.0
 offset_right = 78.0
 offset_bottom = 46.0
 text = "Time:"
-label_settings = SubResource("LabelSettings_ept12")
-
-[connection signal="gameover" from="player" to="." method="_on_player_gameover"]
-[connection signal="timeout" from="monster_spawn_timer" to="." method="_on_monster_spawn_timer_timeout"]
