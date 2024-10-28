@@ -2,7 +2,8 @@ extends Control
 
 @onready var Gametimer: Timer = $Countdown
 @onready var time: Label = $Minutes
-
+var seconds
+var minutes
 #var collected = candy.collected
 
 # Called when the node enters the scene tree for the first time.
@@ -13,8 +14,8 @@ func time_left_to_live():
 	var timeLeft = Gametimer.time_left
 	
 	#Update times
-	var minutes = floor(timeLeft / 60)
-	var seconds = int(timeLeft) % 60
+	minutes = floor(timeLeft / 60)
+	seconds = int(timeLeft) % 60
 
 	return [minutes, seconds]
 

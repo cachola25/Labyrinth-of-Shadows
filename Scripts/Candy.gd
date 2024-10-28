@@ -17,8 +17,8 @@ func _on_body_entered(body):
 	#Delete cookie when picked up
 	
 	$ChompSound.play()
-	var time = body.get_parent().get_node("UICountdown").seconds
-	time += 30
+	#var time = body.get_parent().get_node("UI_countdown")
+	#time.seconds += 30
 	
 	queue_free()
  

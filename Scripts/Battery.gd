@@ -16,8 +16,6 @@ func _on_body_entered(body):
 	if body is Player:
 		#Play beep noise when battery is picked up
 		emit_signal("play_beep")
-		var time = body.get_parent().get_node("UI_countdown")
-		time.seconds += 30
 		#Delete battery when it is picked up
 		queue_free()
 	
