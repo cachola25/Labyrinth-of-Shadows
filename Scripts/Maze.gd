@@ -1,13 +1,11 @@
 extends Node3D
 
-@onready var timer: Timer = $GameTimer
 @onready var player = $player
 @onready var monster_scene = preload("res://scenes/Monster.tscn")
 var monster_in_scene = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer.start()
 	for cookie in $Cookies.get_children():
 		cookie.connect("play_chomp", _on_play_chomp)
 	for battery in $Batteries.get_children():
@@ -47,7 +45,9 @@ func _on_player_gameover() -> void:
 	get_tree().change_scene_to_file("res://End_Scene/End_Screen_Scenes/end_screen.tscn")
 	
 func _on_play_chomp():
-	$ChompSound.play()
+	#$ChompSound.play()
+	pass
 	
 func _on_play_beep():
-	$BeepNoise.play()
+	#$BeepNoise.play()
+	pass

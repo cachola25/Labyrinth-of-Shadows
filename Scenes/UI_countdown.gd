@@ -4,11 +4,15 @@ extends Control
 @onready var time: Label = $Minutes
 var seconds
 var minutes
+var cookie_collected = false
+
 #var collected = candy.collected
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Gametimer.start()
+	for cookie in get_parent().get_node("Cookies").get_children():
+		cookie.connect("collected", _on_cookie_collected)
 
 func time_left_to_live():
 	var timeLeft = Gametimer.time_left
@@ -28,4 +32,7 @@ func stop() -> void:
 	#Stops timer
 	set_process(false)
 	
-	
+func _on_cookie_collected():
+	var time_left = $Countdown.time_left
+	$Countdown.stop()
+	$Countdown.start(time_left + 30)
