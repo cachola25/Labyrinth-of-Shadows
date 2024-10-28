@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Start_Menu/StartMenu_Scripts/main_menu.gd" id="1_2vygw"]
 [ext_resource type="PackedScene" uid="uid://d3vk4rsnf0mjt" path="res://Start_Menu/StartMenu_Scenes/Fader.tscn" id="2_bc8xn"]
-[ext_resource type="FontFile" uid="uid://dde0pgok3h5it" path="res://assets/Fonts/DIEDIEDI.TTF" id="3_tr8u0"]
+[ext_resource type="FontFile" uid="uid://ck2oslt5vis18" path="res://assets/Fonts/DIEDIEDI.TTF" id="3_8tpyu"]
 [ext_resource type="PackedScene" uid="uid://cy3x0c8yjiuo" path="res://Start_Menu/StartMenu_Scenes/menu_components.tscn" id="4_uyccg"]
 [ext_resource type="AudioStream" uid="uid://dj6ridine2kgg" path="res://assets/Start_screen_audio/main_theme.wav" id="5_hufjf"]
 
@@ -34,7 +34,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_tr8u0")
+theme_override_fonts/font = ExtResource("3_8tpyu")
 theme_override_font_sizes/font_size = 116
 text = "Labyrinth of Shadows"
 horizontal_alignment = 1
@@ -57,7 +57,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.6, 0.00784314, 0.00784314, 1)
 theme_override_colors/icon_hover_color = Color(0.227451, 0.227451, 0.227451, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.0708272, 0.0708272, 0.0708272, 1)
-theme_override_fonts/font = ExtResource("3_tr8u0")
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 expand_icon = true
@@ -69,7 +68,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.6, 0.00784314, 0.00784314, 1)
 theme_override_colors/icon_hover_color = Color(0.226707, 0.226707, 0.226707, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.101961, 0.101961, 0.101961, 1)
-theme_override_fonts/font = ExtResource("3_tr8u0")
 theme_override_font_sizes/font_size = 40
 text = "Quit
 "

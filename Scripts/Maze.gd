@@ -12,6 +12,7 @@ func _ready() -> void:
 		cookie.connect("play_chomp", _on_play_chomp)
 	for battery in $Batteries.get_children():
 		battery.connect("play_beep", _on_play_beep)
+	$player.connect("gameover",_on_player_gameover)
 	
 func _process(delta: float) -> void:
 	pass

@@ -2077,7 +2077,7 @@ environment = SubResource("Environment_y3mpu")
 [node name="Hud" parent="CanvasLayer" instance=ExtResource("6_dyy3c")]
 
 [node name="monster_spawn_timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 2.0
 one_shot = true
 autostart = true
 
@@ -2139,3 +2139,5 @@ offset_top = 7.0
 offset_right = 78.0
 offset_bottom = 46.0
 text = "Time:"
+
+[connection signal="timeout" from="monster_spawn_timer" to="." method="_on_monster_spawn_timer_timeout"]
