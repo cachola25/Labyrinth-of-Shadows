@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://g8nj7843gmnw"]
+[gd_scene load_steps=6 format=3 uid="uid://g8nj7843gmnw"]
 
 [ext_resource type="Script" path="res://Start_Menu/StartMenu_Scripts/main_menu.gd" id="1_2vygw"]
 [ext_resource type="PackedScene" uid="uid://d3vk4rsnf0mjt" path="res://Start_Menu/StartMenu_Scenes/Fader.tscn" id="2_bc8xn"]
-[ext_resource type="FontFile" uid="uid://d1msnpwoe0dr1" path="res://assets/Fonts/Avallon All Caps.ttf" id="3_snhll"]
-[ext_resource type="FontFile" uid="uid://bbn1qdl4m3ji0" path="res://assets/Fonts/Avallon Alt.ttf" id="4_r3453"]
+[ext_resource type="FontFile" uid="uid://dde0pgok3h5it" path="res://assets/Fonts/DIEDIEDI.TTF" id="3_tr8u0"]
 [ext_resource type="PackedScene" uid="uid://cy3x0c8yjiuo" path="res://Start_Menu/StartMenu_Scenes/menu_components.tscn" id="4_uyccg"]
 [ext_resource type="AudioStream" uid="uid://dj6ridine2kgg" path="res://assets/Start_screen_audio/main_theme.wav" id="5_hufjf"]
 
@@ -34,10 +33,10 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="CanvasLayer/Fader/Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
-theme_override_colors/font_color = Color(0.69, 0.69, 0.69, 1)
-theme_override_fonts/font = ExtResource("3_snhll")
-theme_override_font_sizes/font_size = 131
-text = "Labrynth of Shadows"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_tr8u0")
+theme_override_font_sizes/font_size = 116
+text = "Labyrinth of Shadows"
 horizontal_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Fader/Control/VBoxContainer"]
@@ -54,9 +53,11 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
-theme_override_colors/icon_hover_color = Color(0.101868, 0.101868, 0.101868, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.00784314, 0.00784314, 1)
+theme_override_colors/icon_hover_color = Color(0.227451, 0.227451, 0.227451, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.0708272, 0.0708272, 0.0708272, 1)
-theme_override_fonts/font = ExtResource("4_r3453")
+theme_override_fonts/font = ExtResource("3_tr8u0")
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 expand_icon = true
@@ -64,9 +65,11 @@ expand_icon = true
 [node name="Quit" type="Button" parent="CanvasLayer/Fader/Control/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_colors/icon_hover_color = Color(0.101961, 0.101961, 0.101961, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.00784314, 0.00784314, 1)
+theme_override_colors/icon_hover_color = Color(0.226707, 0.226707, 0.226707, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.101961, 0.101961, 0.101961, 1)
-theme_override_fonts/font = ExtResource("4_r3453")
+theme_override_fonts/font = ExtResource("3_tr8u0")
 theme_override_font_sizes/font_size = 40
 text = "Quit
 "
