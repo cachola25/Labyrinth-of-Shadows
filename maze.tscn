@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bvs1umk6trk2t" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
 [ext_resource type="PackedScene" uid="uid://cov0jox5qaik0" path="res://Scenes/Battery.tscn" id="6_h8leq"]
-[ext_resource type="Script" path="res://Scripts/UI_countdown.gd" id="7_cja25"]
+[ext_resource type="Script" path="res://Scenes/UI_countdown.gd" id="7_cja25"]
 [ext_resource type="Texture2D" uid="uid://d4bvjmkemamsi" path="res://assets/ScaryTimer.jpg" id="7_wd5lm"]
 [ext_resource type="PackedScene" uid="uid://bxyaype3u2ek2" path="res://player/HUD.tscn" id="9_0b6i6"]
 
