@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 class_name monster
-const SPEED = 3.0
+const SPEED = 6.0
 
 @onready var player = get_parent().get_node("player")
 @export var turn_speed = 4.0
@@ -10,7 +10,11 @@ func _ready() -> void:
 	pass
 	
 func _physics_process(delta):
-	$NavigationAgent3D.set_target_position(player.global_transform.origin)
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	if player.global_transform.origin != null:
+		$NavigationAgent3D.set_target_position(player.global_transform.origin)
 
 	# Get the next position along the path
 	var next_position = $NavigationAgent3D.get_next_path_position()
