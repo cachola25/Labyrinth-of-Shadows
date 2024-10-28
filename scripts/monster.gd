@@ -3,11 +3,12 @@ extends CharacterBody3D
 class_name monster
 const SPEED = 3.0
 const SPEEDUP_THRESHOLD = 30
+@onready var maze_scene = get_tree().root.get_child(0)
 @onready var player = get_parent().get_node("player")
 @export var turn_speed = 4.0
 
 func _ready() -> void:
-	pass
+	$updated_monster/AnimationPlayer.play("Armature_001|Armature|Armature|ArmatureAction_001")
 
 func get_path_length():
 	var path = $NavigationAgent3D.get_current_navigation_path()
@@ -37,7 +38,13 @@ func _physics_process(delta):
 		else:
 			set_velocity(velocity)
 		move_and_slide()
+		if not $NavigationAgent3D.is_target_reachable():
+			maze_scene.monster_in_scene = false
+			maze_scene.get_node("monster_spawn_timer").start()
+			queue_free()
+			
 	else:
 		# No path found or at target position
 		velocity = Vector3.ZERO
+
 	

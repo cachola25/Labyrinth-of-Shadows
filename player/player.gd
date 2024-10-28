@@ -30,6 +30,8 @@ func _process(delta: float) -> void:
 		current_camera.current = true
 		
 	if Input.is_action_just_pressed("flashlight_toggle"):
+		if not $flashlight_toggle.playing:
+			$flashlight_toggle.play()
 		if $flashlight_timer.is_stopped():
 			flashlight_light.light_energy = flashlight_bar.value
 			$flashlight_timer.start()
@@ -50,6 +52,8 @@ func default_movement(delta):
 	var is_moving_backwards = input_dir.y > 0
 
 	if direction != Vector3.ZERO:
+		if not $footsteps.playing:
+			$footsteps.play()
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 
@@ -63,6 +67,8 @@ func default_movement(delta):
 			$player_helper/survivor.rotation.y = 0
 		$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Jog")
 	else:
+		if $footsteps.playing:
+			$footsteps.stop()
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")

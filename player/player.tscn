@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b816ri5dm4imj"]
+[gd_scene load_steps=7 format=3 uid="uid://b816ri5dm4imj"]
 
 [ext_resource type="PackedScene" uid="uid://bwwwtgajo3ecu" path="res://player/player_helper.tscn" id="1_8aobv"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_67jn6"]
+[ext_resource type="AudioStream" uid="uid://ctc2pgutf3ubp" path="res://Audio/DirtFootsteps1.mp3" id="3_qplpb"]
+[ext_resource type="AudioStream" uid="uid://bbg1ty4nqv6cq" path="res://Audio/Flashlight Sound Effect sfx [ ezmp3.cc ].mp3" id="4_p5wku"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ce6jw"]
 
@@ -29,7 +31,7 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1)
 
 [node name="flashlight_timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 1.5
 autostart = true
 
 [node name="start_flicker_timer" type="Timer" parent="."]
@@ -43,6 +45,15 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.811401, 0)
 shape = SubResource("CapsuleShape3D_5lrcv")
+
+[node name="footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qplpb")
+volume_db = 5.0
+pitch_scale = 1.4
+
+[node name="flashlight_toggle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p5wku")
+volume_db = -5.0
 
 [connection signal="timeout" from="flashlight_timer" to="." method="_on_flashlight_timer_timeout"]
 [connection signal="timeout" from="start_flicker_timer" to="." method="_on_start_flicker_timer_timeout"]

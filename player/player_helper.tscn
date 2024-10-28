@@ -35,6 +35,7 @@ shape = SubResource("CylinderShape3D_yrh37")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.300432, 1.10326, 0.69954)
 target_position = Vector3(0, -15, 0)
 collision_mask = 6
+debug_shape_thickness = 5
 
 [node name="RayCast3D2" type="RayCast3D" parent="survivor"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.7, 1.103, 0.7)

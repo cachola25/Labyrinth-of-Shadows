@@ -15,14 +15,14 @@ func _process(delta: float) -> void:
 		check_line_of_sight()
 	
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is monster and $survivor/SpotLight3D.light_energy > 0:
+	if body is monster:
 		monster_scene = body
 		monster_in_view = true
 
 func check_line_of_sight():
 	for i in range(len(flashlight_rays)):
 		if flashlight_rays[i].is_colliding():
-			if flashlight_rays[i].get_collider() is monster:
+			if flashlight_rays[i].get_collider() is monster and $survivor/SpotLight3D.light_energy > 0:
 				despawn_monster()
 
 func despawn_monster():
@@ -33,5 +33,5 @@ func despawn_monster():
 	maze_scene.get_node("monster_spawn_timer").start()
 
 func _on_flashlight_area_body_exited(body: Node3D) -> void:
-	if body is monster or $survivor/SpotLight3D.light_energy <= 0:
+	if body is monster:
 		monster_in_view = false
