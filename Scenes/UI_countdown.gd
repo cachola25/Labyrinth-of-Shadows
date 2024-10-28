@@ -27,9 +27,9 @@ func _process(delta: float) -> void:
 	$Msecs.text = "%3d" % msec
 	
 	#Cookie updating
-	if Candy.collected == true:
-		seconds - 30
-		Candy.collected = false
+	#if Candy.collected == true:
+		#seconds - 30
+		#Candy.collected = false
 		
 	#CHANGE TO MAKE POP UP
 	if minutes == 5:
