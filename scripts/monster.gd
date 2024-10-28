@@ -9,9 +9,9 @@ const SPEEDUP_THRESHOLD = 30
 @export var turn_speed = 4.0
 
 func _ready() -> void:
-	$updated_monster/AnimationPlayer.play("Armature_001|Armature|Armature|ArmatureAction_001")
-	$updated_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature|ArmatureAction")
-
+	#$updated_monster/AnimationPlayer.play("Armature_001|Armature|Armature|ArmatureAction_001")
+	#$updated_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature|ArmatureAction")
+	pass
 func get_path_length():
 	var path = $NavigationAgent3D.get_current_navigation_path()
 	var total_distance = 0
