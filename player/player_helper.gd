@@ -1,13 +1,15 @@
 extends Node3D
 
-@onready var maze_scene = get_tree().root.get_child(0)
+@onready var maze_scene
 @onready var player_scene = get_parent()
 @onready var monster_in_view = false
 @onready var monster_scene
 @onready var flashlight_rays = [$survivor/RayCast3D, $survivor/RayCast3D2, $survivor/RayCast3D3]
 
 func _ready() -> void:
-	pass
+	for child in get_tree().root.get_children():
+		if child.name == "maze":
+			maze_scene = child
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

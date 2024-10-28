@@ -1,7 +1,8 @@
 extends Area3D
 
 signal play_chomp
-var collected: bool = false
+signal collected
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -12,10 +13,9 @@ func _process(delta):
 	rotate_y(0.01)
 	
 func _on_body_entered(body):
-	#Plays chomping sound when player runs over coin
-	emit_signal("play_chomp")
-	#Delete cookie when picked up
-	$ChompSound.play()
-	collected = true
-	queue_free()
+	if body is Player:
+		#Plays chomping sound when player runs over coin
+		emit_signal("play_chomp")
+		emit_signal("collected")
+		queue_free()
  
