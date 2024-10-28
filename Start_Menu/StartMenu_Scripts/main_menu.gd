@@ -13,8 +13,7 @@ func _ready():
 
 func on_start_pressed():
 	get_tree().change_scene_to_file("res://maze.tscn")
-	#if game_scene:
-		#get_tree().change_scene_to(game_scene)
+	
 func on_quit_pressed():
 	get_tree().quit()
 
