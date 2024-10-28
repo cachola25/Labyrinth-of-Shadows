@@ -13,12 +13,17 @@ func _process(delta):
 	
 func _on_body_entered(body):
 	#Plays chomping sound when player runs over coin
-	emit_signal("play_chomp")
-	#Delete cookie when picked up
-	
-	$ChompSound.play()
-	#var time = body.get_parent().get_node("UI_countdown")
-	#time.seconds += 30
-	
-	queue_free()
+	if body is Player:
+		emit_signal("play_chomp")
+		#Delete cookie when picked up
+		$ChompSound.play()
+		var curr_time_text = body.get_parent().get_node("UI").get_node("Minutes").text
+		var curr_seconds_text = curr_time_text.substr(3,5)
+		var curr_seconds = int(curr_seconds_text)
+		if curr_seconds_text[0] == "0":
+			curr_seconds = int(curr_seconds_text[1])
+		curr_seconds += 30
+		curr_time_text = str(curr_seconds)
+		
+		queue_free()
  

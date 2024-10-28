@@ -20,4 +20,3 @@ Double click on the labyrinth_of_shadows.exe.
 Immersive 3D corn maze thriller game with winding and eerie paths. 
 You don’t have long as you race to escape this horrific maze. 
 Beware of lurking dangers and unexpected scares that make each turn a heart-pounding experience!
-
