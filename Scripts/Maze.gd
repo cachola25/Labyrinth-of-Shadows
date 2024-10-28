@@ -57,7 +57,7 @@ func _on_player_gameover() -> void:
 
 	# Create a Tween to animate the FOV
 	var tween = get_tree().create_tween()
-
+	
 	# Zoom In
 	tween.tween_property(monster_camera, "fov", zoom_fov, zoom_duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	# Zoom Out
@@ -72,6 +72,7 @@ func _on_player_gameover() -> void:
 	$WorldEnvironment.environment.background_energy_multiplier = 1
 	$jumpscare_noise.play(3.8)
 	$player/player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Death")
+	global_monster.get_node("updated_monster").get_node("AnimationPlayer").play("Armature_001|Armature|Armature|ArmatureAction_001")
 	
 	
 func _on_play_chomp():

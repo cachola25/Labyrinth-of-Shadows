@@ -10,6 +10,7 @@ const SPEEDUP_THRESHOLD = 30
 
 func _ready() -> void:
 	$updated_monster/AnimationPlayer.play("Armature_001|Armature|Armature|ArmatureAction_001")
+	$updated_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature|ArmatureAction")
 
 func get_path_length():
 	var path = $NavigationAgent3D.get_current_navigation_path()
