@@ -8,6 +8,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ce6jw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5lrcv"]
+radius = 0.687566
+height = 2.27384
 
 [node name="player" type="CharacterBody3D"]
 collision_layer = 32769

@@ -9,6 +9,7 @@ const SPEED = 15
 @onready var flickering_threshold = flashlight_bar.max_value * 0.5
 
 var is_flickering = false
+var is_game_over = false
 
 signal gameover
 func _ready():
@@ -19,6 +20,9 @@ func _ready():
 	
 
 func _process(delta: float) -> void:
+	if is_game_over:
+		return
+		
 	if Input.is_action_just_pressed("change_perspective"):
 		if current_camera == $THIRD:
 			current_camera = $FIRST
@@ -133,4 +137,5 @@ func _on_start_flicker_timer_timeout() -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is monster:
+		current_camera.clear_current(true)
 		gameover.emit()

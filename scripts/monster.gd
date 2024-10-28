@@ -2,14 +2,15 @@ extends CharacterBody3D
 
 class_name monster
 
-const SPEED = 6.0
+const SPEED = 3.0
 const SPEEDUP_THRESHOLD = 30
 @onready var maze_scene = get_tree().root.get_child(0)
 @onready var player = get_parent().get_node("player")
 @export var turn_speed = 4.0
 
 func _ready() -> void:
-	$monster/AnimationPlayer.play("Armature_001|Armature|Armature")
+	$updated_monster/AnimationPlayer.play("Armature_001|Armature|Armature|ArmatureAction_001")
+	$updated_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature|ArmatureAction")
 
 func get_path_length():
 	var path = $NavigationAgent3D.get_current_navigation_path()
