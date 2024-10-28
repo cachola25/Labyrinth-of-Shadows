@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bwwwtgajo3ecu" path="res://player/player_helper.tscn" id="1_8aobv"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_67jn6"]
 [ext_resource type="AudioStream" uid="uid://ctc2pgutf3ubp" path="res://Audio/DirtFootsteps1.mp3" id="3_qplpb"]
-[ext_resource type="AudioStream" uid="uid://bbg1ty4nqv6cq" path="res://Audio/Flashlight Sound Effect sfx [ ezmp3.cc ].mp3" id="4_p5wku"]
+[ext_resource type="AudioStream" uid="uid://liq8nihaxvjc" path="res://Audio/Flashlight Sound Effect sfx [ ezmp3.cc ].mp3" id="4_p5wku"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ce6jw"]
 

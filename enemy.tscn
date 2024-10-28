@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2di126qprwxo"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_ym45c"]
-[ext_resource type="PackedScene" uid="uid://evlumsrl6n3c" path="res://Models/alien.blend" id="2_83w0j"]
+[ext_resource type="PackedScene" uid="uid://ny7dfa51vfrh" path="res://Models/alien.blend" id="2_83w0j"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5qybe"]
 radius = 0.231587
