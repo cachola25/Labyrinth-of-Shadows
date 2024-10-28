@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://eprwcilsgq5t"]
+[gd_scene load_steps=7 format=3 uid="uid://cov0jox5qaik0"]
 
 [ext_resource type="Script" path="res://Scripts/Battery.gd" id="1_3c3il"]
-[ext_resource type="ArrayMesh" uid="uid://cbkiic7qrpysk" path="res://assets/tinker.obj" id="1_78qtd"]
-[ext_resource type="Texture2D" uid="uid://bjxjiw1u4570e" path="res://assets/Battery.png" id="2_t1bpo"]
-[ext_resource type="AudioStream" uid="uid://blwe7qgy58ebu" path="res://Audio/BeepNoise.mp3" id="3_ju0fu"]
+[ext_resource type="ArrayMesh" uid="uid://bbeb2aqg44vxo" path="res://assets/tinker.obj" id="1_78qtd"]
+[ext_resource type="Texture2D" uid="uid://d3kmab06vyp7y" path="res://assets/Battery.png" id="2_t1bpo"]
+[ext_resource type="AudioStream" uid="uid://bxsorsovk3dy0" path="res://Audio/BeepNoise.mp3" id="3_ju0fu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0bhh"]
 albedo_texture = ExtResource("2_t1bpo")
