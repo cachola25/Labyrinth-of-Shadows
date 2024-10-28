@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://14m4pwxvrlfe"]
+[gd_scene load_steps=4 format=3 uid="uid://14m4pwxvrlfe"]
 
 [ext_resource type="Texture2D" uid="uid://bm4q1o3lm6wn5" path="res://assets/haunted-house-vintage-style.jpg" id="1_hfbei"]
 [ext_resource type="FontFile" uid="uid://dde0pgok3h5it" path="res://assets/Fonts/DIEDIEDI.TTF" id="1_pwja6"]
+[ext_resource type="AudioStream" uid="uid://hjsbelbme6xy" path="res://assets/Fonts/fnaf-hooray.mp3" id="3_jxd8w"]
 
 [node name="End_Screen" type="Node3D"]
 
@@ -82,3 +83,7 @@ theme_override_font_sizes/font_size = 40
 text = "Quit
 "
 icon_alignment = 1
+
+[node name="Fnaf-hooray" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("3_jxd8w")
+autoplay = true
