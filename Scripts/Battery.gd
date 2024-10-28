@@ -16,6 +16,8 @@ func _on_body_entered(body):
 	if body is Player:
 		#Play beep noise when battery is picked up
 		emit_signal("play_beep")
+		var player_flashlight_bar = body.get_parent().get_node("CanvasLayer").get_node("Hud").get_node("flashlight_bar")
+		player_flashlight_bar.value += player_flashlight_bar.max_value / 4
 		#Delete battery when it is picked up
 		queue_free()
 	
