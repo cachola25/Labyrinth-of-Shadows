@@ -19,7 +19,6 @@ func get_path_length():
 	
 func _physics_process(delta):
 	$NavigationAgent3D.set_target_position(player.global_transform.origin)
-	get_path_length()
 	# Get the next position along the path
 	var next_position = $NavigationAgent3D.get_next_path_position()
 	if next_position != Vector3.ZERO:

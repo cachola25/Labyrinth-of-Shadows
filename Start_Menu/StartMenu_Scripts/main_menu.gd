@@ -12,8 +12,7 @@ func _ready():
 	fader.connect("fade_finished", self.on_fade_finished)
 
 func on_start_pressed():
-	if game_scene:
-		get_tree().change_scene_to(game_scene)
+	get_tree().change_scene_to_file("res://maze.tscn")
 
 func on_quit_pressed():
 	get_tree().quit()
