@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c856xhgf2p7dp"]
+[gd_scene load_steps=4 format=3 uid="uid://c856xhgf2p7dp"]
 
+[ext_resource type="AudioStream" uid="uid://kw3emwhbhxj6" path="res://creepy-laugh-sound-203187.mp3" id="1_jp24v"]
 [ext_resource type="Texture2D" uid="uid://bnnffu45mnfqh" path="res://Horror face.jpg" id="1_mw5vx"]
 [ext_resource type="FontFile" uid="uid://dde0pgok3h5it" path="res://assets/Fonts/DIEDIEDI.TTF" id="2_k1gxg"]
 
 [node name="BadEnding" type="Node3D"]
+
+[node name="Creepy-laugh-sound-203187" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jp24v")
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
