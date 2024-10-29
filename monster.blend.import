@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mvujr0bhd6km"
-path="res://.godot/imported/monster.blend-49896d6f6a0177bbc0960b80c8f9b6d4.scn"
+valid=false
 
 [deps]
 
 source_file="res://monster.blend"
-dest_files=["res://.godot/imported/monster.blend-49896d6f6a0177bbc0960b80c8f9b6d4.scn"]
 
 [params]
 

@@ -1,15 +1,14 @@
-[gd_scene load_steps=21 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=20 format=3 uid="uid://dkewdrsdafkci"]
 
-[ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
-[ext_resource type="PackedScene" uid="uid://dnkogqny2cdn" path="res://assets/Dirt.tscn" id="1_o8okg"]
-[ext_resource type="Script" path="res://Scripts/Maze.gd" id="1_oc1wt"]
-[ext_resource type="PackedScene" uid="uid://qiia5yg12lov" path="res://scenes/Candy.tscn" id="2_bxqei"]
-[ext_resource type="Texture2D" uid="uid://cod3pdkdc1psl" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="PackedScene" path="res://assets/Corn.tscn" id="1_fwotj"]
+[ext_resource type="PackedScene" path="res://assets/Dirt.tscn" id="1_o8okg"]
+[ext_resource type="PackedScene" uid="uid://qiia5yg12lov" path="res://Scenes/Candy.tscn" id="2_bxqei"]
+[ext_resource type="Texture2D" uid="uid://bvs1umk6trk2t" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
-[ext_resource type="PackedScene" uid="uid://eprwcilsgq5t" path="res://Scenes/Battery.tscn" id="6_h8leq"]
+[ext_resource type="PackedScene" uid="uid://cov0jox5qaik0" path="res://Scenes/Battery.tscn" id="6_h8leq"]
 [ext_resource type="Script" path="res://Scenes/UI_countdown.gd" id="7_cja25"]
-[ext_resource type="Texture2D" uid="uid://dm1bkn33p2wtv" path="res://assets/ScaryTimer.jpg" id="7_wd5lm"]
-[ext_resource type="PackedScene" uid="uid://bdkunc41qbb48" path="res://player/HUD.tscn" id="9_0b6i6"]
+[ext_resource type="Texture2D" uid="uid://d4bvjmkemamsi" path="res://assets/ScaryTimer.jpg" id="7_wd5lm"]
+[ext_resource type="PackedScene" uid="uid://bxyaype3u2ek2" path="res://player/HUD.tscn" id="9_0b6i6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oud8t"]
 size = Vector3(100, 1, 100)
@@ -42,7 +41,6 @@ font_size = 28
 font_size = 28
 
 [node name="maze" type="Node3D"]
-script = ExtResource("1_oc1wt")
 
 [node name="CornMaze" type="Node3D" parent="."]
 
