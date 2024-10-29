@@ -11,6 +11,7 @@ Double click on the labyrinth_of_shadows.exe.
 
 - WASD -> Move in corresponding directions
 - C -> Switch camera angle
+- F -> Toggle your flashlight
 - Backspace -> Look behind you
 - Press the start button to launch right into the game from the home screen.
 - Press the quit button to quit.
