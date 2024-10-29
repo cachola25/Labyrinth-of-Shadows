@@ -142,6 +142,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		gameover.emit()
 
 func _on_winning_area_body_entered(body: Node3D) -> void:
-	get_tree().change_scene_to_file("res://End_Scene/End_Screen_Scenes/good_ending_2.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://End_Scene/End_Screen_Scenes/good_ending_2.tscn")
 	#current_camera.clear_current(true)
 	#gameover.emit()

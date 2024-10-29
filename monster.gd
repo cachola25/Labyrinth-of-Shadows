@@ -13,7 +13,7 @@ func _ready() -> void:
 		if child.name == "maze":
 			maze_scene = child
 	$final_monster/AnimationPlayer.connect("animation_finished", _on_anim_finished)
-	$final_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature_001|Armature|ArmatureAction")
+	$final_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature_001|Armature_001|Armature|ArmatureAction")
 	
 func get_path_length():
 	var path = $NavigationAgent3D.get_current_navigation_path()

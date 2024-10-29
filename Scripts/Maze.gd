@@ -76,7 +76,7 @@ func _on_player_gameover() -> void:
 	$WorldEnvironment.environment.background_energy_multiplier = 1
 	$jumpscare_noise.play(3.8)
 	$player/player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Death")
-	global_monster.get_node("final_monster").get_node("AnimationPlayer").play("Armature_001|Armature_001|Armature_001|Armature|ArmatureAction")
+	global_monster.get_node("final_monster").get_node("AnimationPlayer").play("Armature_001|Armature_001|Armature_001|Armature_001|Armature|ArmatureAction")
 	
 func _on_play_chomp():
 	$ChompSound.play()
