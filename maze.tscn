@@ -1,15 +1,14 @@
-[gd_scene load_steps=25 format=3 uid="uid://dkewdrsdafkci"]
+[gd_scene load_steps=26 format=3 uid="uid://dkewdrsdafkci"]
 
 [ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" uid="uid://dnkogqny2cdn" path="res://assets/Dirt.tscn" id="1_o8okg"]
 [ext_resource type="Script" path="res://Scripts/Maze.gd" id="1_oc1wt"]
-[ext_resource type="PackedScene" uid="uid://qiia5yg12lov" path="res://Scenes/Candy.tscn" id="2_bxqei"]
-[ext_resource type="Texture2D" uid="uid://cpshlgthueqvw" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="PackedScene" uid="uid://qiia5yg12lov" path="res://scenes/Candy.tscn" id="2_bxqei"]
+[ext_resource type="Texture2D" uid="uid://cod3pdkdc1psl" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
 [ext_resource type="PackedScene" uid="uid://bdkunc41qbb48" path="res://player/HUD.tscn" id="6_dyy3c"]
-[ext_resource type="PackedScene" uid="uid://eprwcilsgq5t" path="res://Scenes/Battery.tscn" id="6_h8leq"]
+[ext_resource type="PackedScene" uid="uid://eprwcilsgq5t" path="res://scenes/Battery.tscn" id="6_h8leq"]
 [ext_resource type="Script" path="res://Scenes/UI_countdown.gd" id="7_cja25"]
-
 [ext_resource type="Texture2D" uid="uid://dm1bkn33p2wtv" path="res://assets/ScaryTimer.jpg" id="7_wd5lm"]
 [ext_resource type="AudioStream" uid="uid://c5ik0rq25cmai" path="res://Audio/ChompingSound.mp3" id="9_igyxi"]
 [ext_resource type="AudioStream" uid="uid://blwe7qgy58ebu" path="res://Audio/BeepNoise.mp3" id="10_ghnvg"]
@@ -2175,13 +2174,11 @@ transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 83.7643, 0.355303, -59.7996)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371348, 0.267835, 0.000789642)
 shape = SubResource("BoxShape3D_bm5lu")
 
-[connection signal="timeout" from="monster_spawn_timer" to="." method="_on_monster_spawn_timer_timeout"]
-
-[connection signal="finished" from="jumpscare_noise" to="." method="_on_jumpscare_noise_finished"]
-[connection signal="body_entered" from="WinningArea" to="player" method="_on_winning_area_body_entered"]
 [node name="jumpscare_noise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_4wn80")
 volume_db = 10.0
 
+[connection signal="timeout" from="monster_spawn_timer" to="." method="_on_monster_spawn_timer_timeout"]
 [connection signal="timeout" from="UI/Countdown" to="." method="_on_countdown_timeout"]
-
+[connection signal="body_entered" from="WinningArea" to="player" method="_on_winning_area_body_entered"]
+[connection signal="finished" from="jumpscare_noise" to="." method="_on_jumpscare_noise_finished"]

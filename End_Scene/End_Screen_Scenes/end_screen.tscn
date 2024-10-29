@@ -78,3 +78,4 @@ icon_alignment = 1
 environment = SubResource("Environment_megbh")
 
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
