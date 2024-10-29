@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://qiia5yg12lov"]
 
-[ext_resource type="Script" path="res://Scripts/Candy.gd" id="1_2ayjj"]
+[ext_resource type="Script" path="res://scripts/Candy.gd" id="1_0f1tk"]
 [ext_resource type="ArrayMesh" uid="uid://dicbgoen5ylkk" path="res://assets/Cookie.obj" id="2_1olx6"]
 [ext_resource type="Texture2D" uid="uid://buwgt07m0vl7w" path="res://assets/CookieTexture.png" id="3_x74wi"]
 [ext_resource type="AudioStream" uid="uid://c5ik0rq25cmai" path="res://Audio/ChompingSound.mp3" id="4_23xdb"]
@@ -14,7 +14,8 @@ radius = 5.56343
 
 [node name="Candy" type="Area3D"]
 transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, -0.026495, -0.0254631, 0.0373611)
-script = ExtResource("1_2ayjj")
+visible = false
+script = ExtResource("1_0f1tk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_1olx6")

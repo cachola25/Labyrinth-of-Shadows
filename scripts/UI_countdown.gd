@@ -33,7 +33,7 @@ func stop() -> void:
 	set_process(false)
 	
 func _on_cookie_collected():
-	var time_left = $Countdown.time_left
-	$Countdown.stop()
-	$Countdown.start(time_left + 30)
+	var time_left = Gametimer.time_left
+	Gametimer.stop()
+	Gametimer.start(time_left + 30)
 	

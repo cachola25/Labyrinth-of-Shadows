@@ -17,11 +17,6 @@ config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://maze.tscn"
 "<<<<<<<HEAD[autoload]Candy"="*res://Scripts/Candy.gd"
 
-[autoload]
-
-Candy="*res://Scripts/Candy.gd"
-UICountdown="*res://Scripts/UI_countdown.gd"
-
 [debug]
 
 shapes/navigation/enable_agent_paths=false
