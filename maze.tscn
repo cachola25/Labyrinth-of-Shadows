@@ -3,12 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://gj8drfrkebuh" path="res://assets/Corn.tscn" id="1_fwotj"]
 [ext_resource type="PackedScene" uid="uid://dnkogqny2cdn" path="res://assets/Dirt.tscn" id="1_o8okg"]
 [ext_resource type="Script" path="res://Scripts/Maze.gd" id="1_oc1wt"]
-[ext_resource type="PackedScene" uid="uid://qiia5yg12lov" path="res://scenes/Candy.tscn" id="2_bxqei"]
-[ext_resource type="Texture2D" uid="uid://cod3pdkdc1psl" path="res://assets/Unknown.jpeg" id="3_ufobr"]
+[ext_resource type="PackedScene" uid="uid://qiia5yg12lov" path="res://Scenes/Candy.tscn" id="2_bxqei"]
+[ext_resource type="Texture2D" uid="uid://cpshlgthueqvw" path="res://assets/Unknown.jpeg" id="3_ufobr"]
 [ext_resource type="PackedScene" uid="uid://b816ri5dm4imj" path="res://player/player.tscn" id="4_0xims"]
 [ext_resource type="PackedScene" uid="uid://bdkunc41qbb48" path="res://player/HUD.tscn" id="6_dyy3c"]
-[ext_resource type="PackedScene" uid="uid://eprwcilsgq5t" path="res://scenes/Battery.tscn" id="6_h8leq"]
+[ext_resource type="PackedScene" uid="uid://eprwcilsgq5t" path="res://Scenes/Battery.tscn" id="6_h8leq"]
 [ext_resource type="Script" path="res://Scenes/UI_countdown.gd" id="7_cja25"]
+
 [ext_resource type="Texture2D" uid="uid://dm1bkn33p2wtv" path="res://assets/ScaryTimer.jpg" id="7_wd5lm"]
 [ext_resource type="AudioStream" uid="uid://c5ik0rq25cmai" path="res://Audio/ChompingSound.mp3" id="9_igyxi"]
 [ext_resource type="AudioStream" uid="uid://blwe7qgy58ebu" path="res://Audio/BeepNoise.mp3" id="10_ghnvg"]
@@ -51,6 +52,8 @@ font_size = 28
 
 [sub_resource type="LabelSettings" id="LabelSettings_re2if"]
 font_size = 28
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bm5lu"]
 
 [node name="maze" type="Node3D"]
 script = ExtResource("1_oc1wt")
@@ -1958,6 +1961,36 @@ transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603
 [node name="Sketchfab_Scene504" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -38.1529)
 
+[node name="Sketchfab_Scene505" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 67.6392, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene506" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 70.2014, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene507" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 72.6659, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene508" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 75.3354, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene509" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 77.8485, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene510" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 68.5804, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene511" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 71.075, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene512" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 73.5649, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene513" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 75.9214, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene514" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 78.3625, -1.04767, -56.081)
+
 [node name="Scenery" type="Node3D" parent="."]
 
 [node name="Wall1" type="StaticBody3D" parent="Scenery"]
@@ -2013,7 +2046,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 79.868
 shape = SubResource("BoxShape3D_ds4ho")
 
 [node name="player" parent="." instance=ExtResource("4_0xims")]
-transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, 1.891, 0, -3.461)
+transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, 5.14599, 0, -4.01029)
 platform_wall_layers = 65535
 
 [node name="StartingWall" type="StaticBody3D" parent="."]
@@ -2135,10 +2168,20 @@ label_settings = SubResource("LabelSettings_re2if")
 wait_time = 300.0
 one_shot = true
 
+[node name="WinningArea" type="Area3D" parent="."]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 83.7643, 0.355303, -59.7996)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WinningArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371348, 0.267835, 0.000789642)
+shape = SubResource("BoxShape3D_bm5lu")
+
+[connection signal="timeout" from="monster_spawn_timer" to="." method="_on_monster_spawn_timer_timeout"]
+
+[connection signal="finished" from="jumpscare_noise" to="." method="_on_jumpscare_noise_finished"]
+[connection signal="body_entered" from="WinningArea" to="player" method="_on_winning_area_body_entered"]
 [node name="jumpscare_noise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_4wn80")
 volume_db = 10.0
 
-[connection signal="timeout" from="monster_spawn_timer" to="." method="_on_monster_spawn_timer_timeout"]
 [connection signal="timeout" from="UI/Countdown" to="." method="_on_countdown_timeout"]
-[connection signal="finished" from="jumpscare_noise" to="." method="_on_jumpscare_noise_finished"]
+

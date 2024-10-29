@@ -7,17 +7,18 @@ const SPEED = 15
 @onready var flashlight_bar = get_parent().get_node("CanvasLayer").get_node("Hud").get_node("flashlight_bar")
 @onready var flashlight_light = $player_helper/survivor/SpotLight3D
 @onready var flickering_threshold = flashlight_bar.max_value * 0.5
+#@onready var win_area = get _parent().get_node("WinningArea") as Area3D
 
 var is_flickering = false
 var is_game_over = false
 
 signal gameover
+
 func _ready():
 	randomize()
 	$player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Idle")
 	current_camera.current = true
 	flashlight_bar.max_value = flashlight_light.light_energy
-	
 
 func _process(delta: float) -> void:
 	if is_game_over:
@@ -139,3 +140,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is monster and not is_game_over:
 		current_camera.clear_current(true)
 		gameover.emit()
+
+func _on_winning_area_body_entered(body: Node3D) -> void:
+	get_tree().change_scene_to_file("res://End_Scene/End_Screen_Scenes/end_screen.tscn")
+	#current_camera.clear_current(true)
+	#gameover.emit()
