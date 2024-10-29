@@ -1,26 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://14m4pwxvrlfe"]
 
-[ext_resource type="Texture2D" uid="uid://bm4q1o3lm6wn5" path="res://assets/haunted-house-vintage-style.jpg" id="1_hfbei"]
-[ext_resource type="FontFile" uid="uid://dde0pgok3h5it" path="res://assets/Fonts/DIEDIEDI.TTF" id="1_pwja6"]
-[ext_resource type="AudioStream" uid="uid://hjsbelbme6xy" path="res://assets/Fonts/fnaf-hooray.mp3" id="3_jxd8w"]
+[ext_resource type="FontFile" uid="uid://bbn1qdl4m3ji0" path="res://assets/Fonts/Avallon Alt.ttf" id="1_omedg"]
+[ext_resource type="Script" path="res://End_Scene/End_Screen_Scenes/end_screen.gd" id="1_sp363"]
+
+[sub_resource type="Environment" id="Environment_megbh"]
+background_mode = 1
 
 [node name="End_Screen" type="Node3D"]
 script = ExtResource("1_sp363")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-z_index = -1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 10368.0
-offset_bottom = 5832.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_hfbei")
-expand_mode = 1
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -32,14 +21,17 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-offset_bottom = 141.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
 grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 1, 1, 0.827451)
-theme_override_fonts/font = ExtResource("1_pwja6")
-theme_override_font_sizes/font_size = 88
-text = "Congrats you made it..."
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_omedg")
+theme_override_font_sizes/font_size = 128
+text = "You made it..."
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
@@ -52,7 +44,6 @@ grow_vertical = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 10
 metadata/_edit_use_anchors_ = true
 
@@ -65,10 +56,9 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
-theme_override_colors/font_color = Color(1, 1, 1, 0.827451)
 theme_override_colors/icon_hover_color = Color(0.101868, 0.101868, 0.101868, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.0708272, 0.0708272, 0.0708272, 1)
-theme_override_fonts/font = ExtResource("1_pwja6")
+theme_override_fonts/font = ExtResource("1_omedg")
 theme_override_font_sizes/font_size = 40
 text = "Play Again"
 expand_icon = true
@@ -76,15 +66,16 @@ expand_icon = true
 [node name="Quit" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_colors/font_color = Color(1, 1, 1, 0.827451)
 theme_override_colors/icon_hover_color = Color(0.101961, 0.101961, 0.101961, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.101961, 0.101961, 0.101961, 1)
-theme_override_fonts/font = ExtResource("1_pwja6")
+theme_override_fonts/font = ExtResource("1_omedg")
 theme_override_font_sizes/font_size = 40
 text = "Quit
 "
 icon_alignment = 1
 
-[node name="Fnaf-hooray" type="AudioStreamPlayer" parent="CanvasLayer"]
-stream = ExtResource("3_jxd8w")
-autoplay = true
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_megbh")
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
