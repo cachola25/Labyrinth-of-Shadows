@@ -85,7 +85,7 @@ func _on_play_beep():
 	$BeepNoise.play()
 
 func _on_jumpscare_noise_finished() -> void:
-	get_tree().change_scene_to_file("res://End_Scene/End_Screen_Scenes/end_screen.tscn")
+	get_tree().change_scene_to_file("res://bad_ending.tscn")
 
 func _on_countdown_timeout() -> void:
 	$player.emit_signal("gameover")
