@@ -47,6 +47,10 @@ func _on_monster_spawn_timer_timeout() -> void:
 # New Function to Handle Game Over Zoom Effect
 func _on_player_gameover() -> void:
 	$player.is_game_over = true
+	if not monster_in_scene:
+		monster_in_scene = true
+		global_monster = monster_scene.instantiate()
+		add_child(global_monster)
 	var monster_camera = global_monster.get_node("monster_camera")
 	monster_camera.make_current()
 
@@ -72,8 +76,7 @@ func _on_player_gameover() -> void:
 	$WorldEnvironment.environment.background_energy_multiplier = 1
 	$jumpscare_noise.play(3.8)
 	$player/player_helper/survivor/AnimationPlayer.play("Armature|Armature|ANIM-SurvivorA-Death")
-	global_monster.get_node("updated_monster").get_node("AnimationPlayer").play("Armature_001|Armature|Armature|ArmatureAction_001")
-	
+	global_monster.get_node("final_monster").get_node("AnimationPlayer").play("Armature_001|Armature_001|Armature_001|Armature|ArmatureAction")
 	
 func _on_play_chomp():
 	$ChompSound.play()
@@ -83,3 +86,6 @@ func _on_play_beep():
 
 func _on_jumpscare_noise_finished() -> void:
 	get_tree().change_scene_to_file("res://End_Scene/End_Screen_Scenes/end_screen.tscn")
+
+func _on_countdown_timeout() -> void:
+	$player.emit_signal("gameover")

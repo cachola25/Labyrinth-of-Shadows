@@ -12,6 +12,8 @@ func _ready() -> void:
 	for child in get_tree().root.get_children():
 		if child.name == "maze":
 			maze_scene = child
+	$final_monster/AnimationPlayer.connect("animation_finished", _on_anim_finished)
+	$final_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature_001|Armature|ArmatureAction")
 	
 func get_path_length():
 	var path = $NavigationAgent3D.get_current_navigation_path()
@@ -48,5 +50,9 @@ func _physics_process(delta):
 	else:
 		# No path found or at target position
 		velocity = Vector3.ZERO
+
+func _on_anim_finished(anim):
+	if not player.is_game_over:
+		$final_monster/AnimationPlayer.play("Armature_001|Armature_001|Armature_001|Armature|ArmatureAction")
 
 	

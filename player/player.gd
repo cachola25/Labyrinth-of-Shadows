@@ -137,7 +137,7 @@ func _on_start_flicker_timer_timeout() -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is monster:
+	if body is monster and not is_game_over:
 		current_camera.clear_current(true)
 		gameover.emit()
 
