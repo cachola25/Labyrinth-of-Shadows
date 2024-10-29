@@ -1,15 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://14m4pwxvrlfe"]
+[gd_scene load_steps=5 format=3 uid="uid://buwb2fo5h70ak"]
 
-[ext_resource type="FontFile" uid="uid://bbn1qdl4m3ji0" path="res://assets/Fonts/Avallon Alt.ttf" id="1_omedg"]
-[ext_resource type="Script" path="res://End_Scene/End_Screen_Scenes/end_screen.gd" id="1_sp363"]
+[ext_resource type="Script" path="res://bad_ending.gd" id="1_1p5a0"]
+[ext_resource type="AudioStream" uid="uid://d2q3cwht8mhir" path="res://creepy-laugh-sound-203187.mp3" id="1_jp24v"]
+[ext_resource type="Texture2D" uid="uid://bud5xhr6kkpro" path="res://Horror face.jpg" id="1_mw5vx"]
+[ext_resource type="FontFile" uid="uid://ck2oslt5vis18" path="res://assets/Fonts/DIEDIEDI.TTF" id="2_k1gxg"]
 
-[sub_resource type="Environment" id="Environment_megbh"]
-background_mode = 1
+[node name="BadEnding" type="Node3D"]
+script = ExtResource("1_1p5a0")
 
-[node name="End_Screen" type="Node3D"]
-script = ExtResource("1_sp363")
+[node name="Creepy-laugh-sound-203187" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_jp24v")
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10368.0
+offset_bottom = 5832.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_mw5vx")
+expand_mode = 1
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -21,17 +37,14 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -11.5
-offset_bottom = 11.5
+offset_bottom = 141.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_omedg")
-theme_override_font_sizes/font_size = 128
-text = "You made it..."
+theme_override_colors/font_color = Color(0.43, 0, 0.00716656, 0.827451)
+theme_override_fonts/font = ExtResource("2_k1gxg")
+theme_override_font_sizes/font_size = 88
+text = "You were never alone..."
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
@@ -44,6 +57,7 @@ grow_vertical = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 10
 metadata/_edit_use_anchors_ = true
 
@@ -56,9 +70,10 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0.431373, 0, 0.00784314, 0.827451)
 theme_override_colors/icon_hover_color = Color(0.101868, 0.101868, 0.101868, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.0708272, 0.0708272, 0.0708272, 1)
-theme_override_fonts/font = ExtResource("1_omedg")
+theme_override_fonts/font = ExtResource("2_k1gxg")
 theme_override_font_sizes/font_size = 40
 text = "Play Again"
 expand_icon = true
@@ -66,16 +81,14 @@ expand_icon = true
 [node name="Quit" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.431373, 0, 0.00784314, 0.827451)
 theme_override_colors/icon_hover_color = Color(0.101961, 0.101961, 0.101961, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.101961, 0.101961, 0.101961, 1)
-theme_override_fonts/font = ExtResource("1_omedg")
+theme_override_fonts/font = ExtResource("2_k1gxg")
 theme_override_font_sizes/font_size = 40
 text = "Quit
 "
 icon_alignment = 1
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_megbh")
 
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

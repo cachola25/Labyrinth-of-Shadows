@@ -1961,6 +1961,36 @@ transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603
 [node name="Sketchfab_Scene504" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
 transform = Transform3D(0.00183256, 0, 3, 0, 3, 0, -3, 0, 0.00183256, 8.42504, -1.04767, -38.1529)
 
+[node name="Sketchfab_Scene505" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 67.6392, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene506" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 70.2014, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene507" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 72.6659, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene508" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 75.3354, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene509" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 77.8485, -1.04767, -64.0821)
+
+[node name="Sketchfab_Scene510" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 68.5804, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene511" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 71.075, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene512" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 73.5649, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene513" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 75.9214, -1.04767, -56.081)
+
+[node name="Sketchfab_Scene514" parent="NavigationRegion3D/CornMaze" instance=ExtResource("1_fwotj")]
+transform = Transform3D(-0.0157603, 0, 2.99996, 0, 3, 0, -2.99996, 0, -0.0157603, 78.3625, -1.04767, -56.081)
+
 [node name="Scenery" type="Node3D" parent="."]
 
 [node name="Wall1" type="StaticBody3D" parent="Scenery"]
@@ -2017,6 +2047,7 @@ shape = SubResource("BoxShape3D_ds4ho")
 
 [node name="player" parent="." instance=ExtResource("4_0xims")]
 transform = Transform3D(0.123584, 0, 0.992334, 0, 1, 0, -0.992334, 0, 0.123584, 48.5195, 0, -59.6979)
+
 platform_wall_layers = 65535
 
 [node name="StartingWall" type="StaticBody3D" parent="."]
@@ -2138,6 +2169,13 @@ label_settings = SubResource("LabelSettings_re2if")
 wait_time = 300.0
 one_shot = true
 
+[node name="WinningArea" type="Area3D" parent="."]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 83.7643, 0.355303, -59.7996)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WinningArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371348, 0.267835, 0.000789642)
+shape = SubResource("BoxShape3D_bm5lu")
+
 [node name="jumpscare_noise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_4wn80")
 volume_db = 10.0
@@ -2151,5 +2189,6 @@ shape = SubResource("BoxShape3D_rnmy2")
 
 [connection signal="timeout" from="monster_spawn_timer" to="." method="_on_monster_spawn_timer_timeout"]
 [connection signal="timeout" from="UI/Countdown" to="." method="_on_countdown_timeout"]
+[connection signal="body_entered" from="WinningArea" to="player" method="_on_winning_area_body_entered"]
 [connection signal="finished" from="jumpscare_noise" to="." method="_on_jumpscare_noise_finished"]
 [connection signal="body_entered" from="WinningArea" to="player" method="_on_winning_area_body_entered"]

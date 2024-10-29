@@ -33,7 +33,6 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 1)
 
 [node name="flashlight_timer" type="Timer" parent="."]
-wait_time = 1.5
 autostart = true
 
 [node name="start_flicker_timer" type="Timer" parent="."]
